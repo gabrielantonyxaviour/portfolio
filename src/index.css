@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+body {
+  background-color: #000300;
+  font-family: "Press Start 2P", cursive;
+}
+.select-custom ::selection {
+  background: red;
+  color: white;
+}
+
+.select-custom-last ::selection {
+  background: red;
+  color: black;
+}
