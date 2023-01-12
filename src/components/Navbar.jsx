@@ -12,8 +12,11 @@ const Navbar = () => {
   return (
     <div class="flex items-center h-24 max-w-[1240px] mx-auto px-4 text-white">
       <h1 class="w-full text-2xl font-bold text-[#FF3131] select-none hover:text-white cursor-default ease-in-out duration-500">
-        gabrielaxy.eth
+        <Link className="select-none " to="/">
+          gabrielaxy.eth
+        </Link>
       </h1>
+
       <ul class="hidden md:flex select-none ">
         <li class="p-5 hover:text-[#A9A9A9]">
           <Link classname="select-none" to="/about">
@@ -37,12 +40,25 @@ const Navbar = () => {
         </li>
       </ul>
       <div class="block md:hidden">
-        {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+        {nav ? (
+          <AiOutlineClose size={20} onClick={handleNav} />
+        ) : (
+          <AiOutlineMenu size={20} onClick={handleNav} />
+        )}
       </div>
-      <div class="fixed left-[-100%] top-0 w-[60%] h-full ease-in-out duration-700">
-        <h1 class="w-full text-2xl font-bold text-[#D22B2B] m-4">
-          gabrielaxy.eth
+      <div
+        class={
+          nav
+            ? "fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500"
+            : "fixed left-[-100%] top-0 w-[60%] h-full ease-in-out duration-500"
+        }
+      >
+        <h1 class="w-full text-2xl font-bold text-[#D22B2B] m-4 hover:text-white cursor-default ease-in-out duration-500">
+          <Link className="select-none " to="/">
+            gabrielaxy.eth
+          </Link>
         </h1>
+
         <ul class="p-5 uppercase">
           <li class="p-5 border-b border-gray-600">
             <Link classname="select-none hover:text-[#A9A9A9]" to="/about">

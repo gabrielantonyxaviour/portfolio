@@ -7,6 +7,28 @@ body {
   background-color: #000300;
   font-family: "Press Start 2P", cursive;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff3131;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  background: #ff3131;
+} */
+
 .select-custom ::selection {
   background: red;
   color: white;
@@ -15,4 +37,24 @@ body {
 .select-custom-last ::selection {
   background: red;
   color: black;
+}
+
+.about-hero-last {
+  display: inline;
+  color: red;
+}
+
+/* .select-custom-about::selection {
+  background: red;
+  color: white;
+}
+*/
+.select-custom-about-title::selection {
+  background: white;
+  color: #5a5a5a;
+}
+
+.crazy {
+  position: relative;
+  left: 50%;
 }
