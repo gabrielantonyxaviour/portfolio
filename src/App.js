@@ -1,3 +1,4 @@
+import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -5,7 +6,6 @@ import {
   Redirect,
 } from "react-router-dom";
 import Footer from "./components/Footer";
-import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./pages/Hero";
 import About from "./pages/About";

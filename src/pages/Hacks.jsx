@@ -1,7 +1,400 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Typed from "react-typed";
+import Power from "../assets/power1.gif";
+import ETHGlobal from "../assets/hacks/ethglobal.png";
+
+import BuildQuestLogo from "../assets/hacks/ethglobal/buildquest/buildquestLogo.png";
+import BuildQuestDash from "../assets/hacks/ethglobal/buildquest/buildquest.png";
+import BuildQuestProj from "../assets/hacks/ethglobal/buildquest/suprarms.png";
+
+import HackMoneyLogo from "../assets/hacks/ethglobal/hackmoney/hackmoneyLogo.jpg";
+import HackMoneyDash from "../assets/hacks/ethglobal/hackmoney/hackmoney.png";
+import HackMoneyProj from "../assets/hacks/ethglobal/hackmoney/daolanders.png";
+
+import HackFSLogo from "../assets/hacks/ethglobal/hackfs/hackfsLogo.jpg";
+import HackFSDash from "../assets/hacks/ethglobal/hackfs/hackfs.png";
+import HackFSProj from "../assets/hacks/ethglobal/hackfs/neuralnfts.png";
+
+import MetabolismLogo from "../assets/hacks/ethglobal/metabolism/metabolismLogo.png";
+import MetabolismDash from "../assets/hacks/ethglobal/metabolism/metabolism.png";
+import MetabolismProj from "../assets/hacks/ethglobal/metabolism/dawn.png";
+
+import ETHIndiaLogo from "../assets/hacks/ethglobal/ethindia/ethindiaLogo.png";
+import ETHIndiaDash from "../assets/hacks/ethglobal/ethindia/ethindia.png";
+import ETHIndiaProj from "../assets/hacks/ethglobal/ethindia/polyedu.png";
+
+import FaberLogo from "../assets/hacks/devpost/faberweb3/faberweb3logo.jpg";
+import FaberDash from "../assets/hacks/devpost/faberweb3/faberweb3.png";
+import FaberProj from "../assets/hacks/devpost/faberweb3/brandapp.jpg";
+
+import SpringLogo from "../assets/hacks/devpost/spring/springlogo.png";
+import SpringDash from "../assets/hacks/devpost/spring/spring.png";
+import SpringProj from "../assets/hacks/devpost/spring/airnft.jpg";
+
+import XRPLLogo from "../assets/hacks/devpost/xrpl/xrplLogo.png";
+import XRPLDash from "../assets/hacks/devpost/xrpl/xrpl.png";
+import XRPLProj from "../assets/hacks/devpost/xrpl/xrpals.png";
+
+function ProjectCard({
+  hackLogo,
+  projectDashboard,
+  projectImage,
+  hackName,
+  projectName,
+  slide,
+  description,
+  team,
+  prizes,
+  dashLink,
+}) {
+  return (
+    <div className="my-10 h-[350px] w-[100%] rounded-lg  flex justify-between select-none text-white bg-[#FF3131] hover:-translate-y-1 hover:scale-105 hover:bg-white hover:text-[#000000] duration-300 ">
+      {slide == 0 ? (
+        <img
+          onClick={() => {
+            window.open(dashLink);
+          }}
+          src={hackLogo}
+          alt="hackLogo"
+          className="object-fill rounded-l-lg cursor-pointer"
+          width={600}
+          height={300}
+        />
+      ) : slide == 1 ? (
+        <img
+          onClick={() => {
+            window.open(dashLink);
+          }}
+          src={projectDashboard}
+          className="object-fill rounded-l-lg cursor-pointer"
+          alt="dashboard"
+          width={600}
+          height={300}
+        />
+      ) : (
+        <img
+          onClick={() => {
+            window.open(dashLink);
+          }}
+          src={projectImage}
+          className="object-fill rounded-l-lg cursor-pointer"
+          alt="project"
+          width={600}
+          height={300}
+        />
+      )}
+      <div className="w-[100%] ml-8 mr-4 text-center flex flex-col justify-center select-none">
+        <h1 className="text-xl p-1">{hackName}</h1>
+        <h2 className="text-lg">{projectName}</h2>
+        <p className="text-sm p-2">{description}</p>
+        <h3 className="py-1">Team</h3>
+        <p className="relative z-10 flex justify-center text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+          <span className="">
+            {team.map((mate, index) => (
+              <span
+                onClick={() => {
+                  window.open(mate.link);
+                }}
+                key={index}
+                className="my-1 cursor-pointer mr-1 inline-flex items-center rounded-full bg-zinc-200 px-2.5 py-0.5 text-xs font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-100"
+              >
+                <svg
+                  className="-ml-0.5 mr-1.5 h-2 w-2 text-zinc-600"
+                  fill="currentColor"
+                  viewBox="0 0 8 8"
+                >
+                  <circle cx={4} cy={4} r={3} />
+                </svg>
+                {mate.name}
+              </span>
+            ))}
+          </span>
+        </p>
+        <h3 className="py-1 text-sm">Prizes</h3>
+        <p className="relative z-10 flex justify-center text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+          <span className="">
+            {prizes.map((prize, index) => (
+              <span
+                key={index}
+                className="my-1  mr-1 inline-flex items-center rounded-full bg-zinc-200 px-2.5 py-0.5 text-xs font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-100"
+              >
+                <svg
+                  className="-ml-0.5 mr-1.5 h-2 w-2 text-zinc-600"
+                  fill="currentColor"
+                  viewBox="0 0 8 8"
+                >
+                  <circle cx={4} cy={4} r={3} />
+                </svg>
+                {prize}
+              </span>
+            ))}
+          </span>
+        </p>
+      </div>
+    </div>
+  );
+}
 
 const Hacks = () => {
-  return <div>Hacks</div>;
+  const [slide, setSlide] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setSlide((slide) => (slide + 1) % 3);
+    }, 4000);
+  }, [slide]);
+
+  return (
+    <div className="px-4 max-w-[1240px] mx-auto ">
+      <div className="flex justify-between my-8">
+        <div>
+          <h1 className="text-2xl text-white mt-[70px] select-custom-about-title my-5">
+            My Hackathons
+          </h1>
+          <div className="max-w-[800px] mb-[50px]">
+            <Typed
+              className="text-lg text-gray-500 select-custom "
+              strings={[
+                "My journey into web3 is heavily influenced by hackathons. Just few months after getting into web3, I pushed myself to things that really challenged me. Being a very competitive person, I really found my passion in participating in winning these competitions. Innovating new ideas and making it come to life can become an addiction ",
+              ]}
+              typeSpeed={35}
+              showCursor={false}
+              onStop={() => {}}
+            />
+            <Typed
+              className="text-lg px-3 text-gray-500 select-custom-last about-hero-last"
+              strings={[" XD"]}
+              typeSpeed={70}
+              showCursor={false}
+              startDelay={19000}
+            />
+          </div>
+        </div>
+        <img
+          src={Power}
+          className="select-none mr-8 mb-8"
+          alt="Cat with a guitar"
+          width={300}
+        />
+      </div>
+
+      <ProjectCard
+        hackLogo={BuildQuestLogo}
+        projectDashboard={BuildQuestDash}
+        projectImage={BuildQuestProj}
+        hackName={"BuildQuest 2022"}
+        projectName={"SuprArms"}
+        slide={slide}
+        description={
+          "A 3D multiplayer FPS MetaVerse with 8400+ unique gun NFTs having distinguished looks and stats."
+        }
+        team={[
+          {
+            name: "Gabriel",
+            link: "https://www.linkedin.com/in/gabriel-antony/",
+          },
+          {
+            name: "Sailesh",
+            link: "https://www.linkedin.com/in/sailesh-sivakumar-453061141/",
+          },
+          {
+            name: "Shachindra",
+            link: "https://www.linkedin.com/in/shachindra92/",
+          },
+          { name: "Karan", link: "https://www.linkedin.com/in/karanbdev/" },
+        ]}
+        prizes={[
+          "🕹 Best 3D Metaverse Game built on Polygon",
+          "🥉 Best Dapp using Moralis",
+          "🏅 Best Use of Chainlink",
+        ]}
+        dashLink={"https://ethglobal.com/showcase/suprarms-7xz9r"}
+      />
+      <ProjectCard
+        hackLogo={HackMoneyLogo}
+        projectDashboard={HackMoneyDash}
+        hackName={"HackMoney 2022"}
+        projectName={"DAOLanders"}
+        projectImage={HackMoneyProj}
+        description={
+          "A DAO that helps people to come together buy NFTs stake it, play with it and much more to generate income."
+        }
+        slide={slide}
+        team={[
+          {
+            name: "Gabriel",
+            link: "https://www.linkedin.com/in/gabriel-antony/",
+          },
+          {
+            name: "Fabian",
+            link: "https://www.linkedin.com/in/fabianferno/",
+          },
+        ]}
+        prizes={["🏊‍♂️ Waku — Pool Prize"]}
+        dashLink={"https://ethglobal.com/showcase/daolanders-5f4za"}
+      />
+      <ProjectCard
+        hackLogo={HackFSLogo}
+        projectDashboard={HackFSDash}
+        hackName={"HackFS 2022"}
+        projectName={"NeuralNFTs"}
+        projectImage={HackFSProj}
+        description={
+          "Giving the sixth sense to NFTs by creating an ML model marketplace with some NFT analytics."
+        }
+        slide={slide}
+        team={[
+          {
+            name: "Gabriel",
+            link: "https://www.linkedin.com/in/gabriel-antony/",
+          },
+          {
+            name: "Fabian",
+            link: "https://www.linkedin.com/in/fabianferno/",
+          },
+        ]}
+        prizes={[
+          "🏊‍♂️ NFTPort — Pool Prize",
+          "3️⃣5️⃣ IPFS/Filecoin — Storage Mage",
+          "🔟 Spheron — Top 10 project",
+        ]}
+        dashLink={"https://ethglobal.com/showcase/neuralnfts-yxcg0"}
+      />
+      <ProjectCard
+        hackLogo={MetabolismLogo}
+        projectDashboard={MetabolismDash}
+        hackName={"Metabolism 2022"}
+        projectName={"Dawn"}
+        projectImage={MetabolismProj}
+        description={
+          "View and listen to NFTs with Zora using our user friendly discord bot."
+        }
+        slide={slide}
+        team={[
+          {
+            name: "Gabriel",
+            link: "https://www.linkedin.com/in/gabriel-antony/",
+          },
+          {
+            name: "Pinto",
+            link: "https://www.linkedin.com/in/pintoinfant/",
+          },
+          {
+            name: "Crispin",
+            link: "https://www.linkedin.com/in/crispinr/",
+          },
+        ]}
+        prizes={["🥈 ZORA — 🌜🌞🌛 ZORA protocol and API"]}
+        dashLink={"https://ethglobal.com/showcase/dawn-3p94j"}
+      />
+
+      <ProjectCard
+        hackLogo={ETHIndiaLogo}
+        projectDashboard={ETHIndiaDash}
+        hackName={"ETHIndia 2022"}
+        projectName={"Poly.edu"}
+        projectImage={ETHIndiaProj}
+        description={"Proof of Education, Own what you learn."}
+        slide={slide}
+        team={[
+          {
+            name: "Gabriel",
+            link: "https://www.linkedin.com/in/gabriel-antony/",
+          },
+        ]}
+        prizes={[
+          "🏊 Valist — Prize Pool",
+          "🏊 The Graph — Pool Prize",
+          "🥇 Router — Best Use",
+        ]}
+        dashLink={"https://ethglobal.com/showcase/poly-edu-t2h8m"}
+      />
+      <ProjectCard
+        hackLogo={FaberLogo}
+        projectDashboard={FaberDash}
+        hackName={"Faber Web3 2022"}
+        projectName={"Brandapp"}
+        projectImage={FaberProj}
+        description={
+          "Mint your brand, Create your own white-label Brand Resource Center."
+        }
+        slide={slide}
+        team={[
+          {
+            name: "Gabriel",
+            link: "https://www.linkedin.com/in/gabriel-antony/",
+          },
+          {
+            name: "Raksha",
+            link: "https://www.linkedin.com/in/raksha001/",
+          },
+          {
+            name: "Subhiksha",
+            link: "https://www.linkedin.com/in/elizabeth-subhiksha-victoria-b3a661193/",
+          },
+          {
+            name: "Veroni",
+            link: "https://www.linkedin.com/in/veroni-shwetha/",
+          },
+          {
+            name: "Jesinthan",
+            link: "https://www.linkedin.com/in/jesinthan/",
+          },
+        ]}
+        prizes={["⚡ Across the Line Award"]}
+        dashLink={"https://devpost.com/software/brandapp"}
+      />
+      <ProjectCard
+        hackLogo={SpringLogo}
+        projectDashboard={SpringDash}
+        hackName={"Chainlink Spring 2022"}
+        projectName={"AIRNFT"}
+        projectImage={SpringProj}
+        description={
+          "An interactive nft service that aids the creator in bringing interactive nfts to the market: be it games, 3d models, interactive animations etc."
+        }
+        slide={slide}
+        team={[
+          {
+            name: "Gabriel",
+            link: "https://www.linkedin.com/in/gabriel-antony/",
+          },
+          {
+            name: "Sailesh",
+            link: "https://www.linkedin.com/in/sailesh-sivakumar-453061141/",
+          },
+          {
+            name: "Shachindra",
+            link: "https://www.linkedin.com/in/shachindra92/",
+          },
+          { name: "Karan", link: "https://www.linkedin.com/in/karanbdev/" },
+          {
+            name: "Ishan",
+            link: "https://www.linkedin.com/in/ishan-pathak-96852a1b7/",
+          },
+        ]}
+        prizes={["🏃 Filecoin - Runners up"]}
+        dashLink={"https://devpost.com/software/ins"}
+      />
+      <ProjectCard
+        hackLogo={XRPLLogo}
+        projectDashboard={XRPLDash}
+        hackName={"XRPL: NFT Launch Party 2022"}
+        projectName={"AIRNFT"}
+        projectImage={XRPLProj}
+        description={"Never remember account address again :)"}
+        slide={slide}
+        team={[
+          {
+            name: "Gabriel",
+            link: "https://www.linkedin.com/in/gabriel-antony/",
+          },
+        ]}
+        prizes={["👑 Honorable Mentions"]}
+        dashLink={"https://devpost.com/software/xrpals"}
+      />
+    </div>
+  );
 };
 
 export default Hacks;
