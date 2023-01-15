@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import AboutHero from "./abouthero.gif";
-import Born from "./born.gif";
-import School from "./school.gif";
-import College from "./college.gif";
+import AboutHero from "../assets/abouthero.gif";
+import Born from "../assets/born.gif";
+import School from "../assets/school.gif";
+import College from "../assets/college.gif";
 import Typed from "react-typed";
 
 // TODO: Add your tech stack by using logo of the language or framework

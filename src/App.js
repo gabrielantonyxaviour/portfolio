@@ -4,7 +4,7 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-
+import Footer from "./components/Footer";
 import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./pages/Hero";
@@ -26,6 +26,7 @@ function App() {
           <Redirect to={Resume} />
         </Route> */}
       </Switch>
+      <Footer />
     </Router>
   );
 }

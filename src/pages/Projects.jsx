@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import octokit from "../components/githubConfig";
 import Typed from "react-typed";
-import Power from "./power2.gif";
+import Power from "../assets/power2.gif";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);

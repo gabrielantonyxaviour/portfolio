@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Typed from "react-typed";
-import Gabe from "./gabe.gif";
+import Gabe from "../assets/gabe.gif";
 const Hero = () => {
   return (
     <div className="text-white">
