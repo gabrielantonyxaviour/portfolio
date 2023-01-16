@@ -152,7 +152,7 @@ const About = () => {
             <Typed
               className="text-lg text-gray-500 select-custom "
               strings={[
-                "A saturday evening with theWeekend on my headphones and it's slightly drizzling with a cold breeze caressing my face and I type console.log(\"Hello World\"). That's the kind of pleasure I seek. I am a web3 developer with over 2 years of experience in building scalable and production ready smart contracts and decentralized applications. I listen to music, play music, hit the gym everyday and...",
+                "A saturday evening with lofi beats on my headphones and it's slightly drizzling with a cold breeze caressing my face and I type console.log(\"Hello World\"). That's the kind of pleasure I seek. I am a web3 developer with over 2 years of experience in building scalable and production ready smart contracts and decentralized applications. I play music, meditate, go to the gym everyday and...",
               ]}
               typeSpeed={35}
               showCursor={false}
