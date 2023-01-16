@@ -140,12 +140,12 @@ const About = () => {
   return (
     <div className="px-4 text-white">
       <div className="max-w-[1200px] mt-[70px]  mx-auto w-full  flex flex-col justify-start">
-        <h1 className="text-md md:text-lg lg:text-2xl select-custom-about-title mb-5 lg:my-5 lg:text-start text-center">
+        <h1 className="  ml-[20px] text-md md:text-lg lg:text-2xl select-custom-about-title mb-5 lg:my-5 lg:text-start text-center">
           About
         </h1>
 
-        <div className="flex flex-col lg:flex-row  justify-between">
-          <div className="text-xs sm:text-sm md:text-base w-[90%] lg:w-[80%] mx-auto mb-12 lg:mb-0 lg:mx-0 text-center lg:text-start">
+        <div className=" ml-[20px] flex flex-col lg:flex-row  justify-between">
+          <div className=" text-xs sm:text-sm md:text-base w-[90%] lg:w-[80%] mx-auto mb-12 lg:mb-0 lg:mx-0 text-center lg:text-start">
             <Typed
               className=" text-gray-500 select-custom "
               strings={[
@@ -165,7 +165,7 @@ const About = () => {
           </div>
           <img
             src={AboutHero}
-            className="mx-auto select-none w-[150px] md:w-[220px] h-[200px] md:h-[330px]"
+            className="mx-auto lg:mx-[50px]  select-none w-[220px] md:w-[240px] h-[200px] md:h-[220px]"
             alt="Cat with a guitar"
           />
         </div>
@@ -179,7 +179,7 @@ const About = () => {
             }
           </div>
         </div>
-        <div className="mt-[200px] lg:my-8">
+        <div className="mt-[200px] ">
           <div className=" text-center">
             <h1 className="text-sm md:text-lg lg:text-2xl select-custom-about-title mb-[50px]">
               Timeline

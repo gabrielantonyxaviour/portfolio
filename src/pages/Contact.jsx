@@ -2,8 +2,6 @@ import React from "react";
 import Meme from "../assets/meme.png";
 import Typed from "react-typed";
 
-// TODO: Insert meme and text content
-// TODO: Mail me option
 function MailIcon(props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
