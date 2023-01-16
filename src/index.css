@@ -6,6 +6,7 @@
 body {
   background-color: #000300;
   font-family: "Press Start 2P", cursive;
+  overflow-x: hidden;
 }
 
 /* width */

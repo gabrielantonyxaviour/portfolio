@@ -89,7 +89,7 @@ const Footer = () => {
         <TwitterIcon className="fill-[#A9A9A9] hover:fill-red-600 hover:cursor-pointer mx-2" />
       </div>
       <div>
-        <p className=" text-[#A9A9A9] text-[9px] text-center font-thin ">
+        <p className="mr-4 text-[#A9A9A9] text-[9px] text-center font-thin ">
           © 2023 Gabriel. All rights reserved.
         </p>
       </div>
