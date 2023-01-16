@@ -10,19 +10,19 @@ const Navbar = () => {
   };
 
   return (
-    <div class="flex items-center h-24 max-w-[1240px] mx-auto px-4 text-white">
-      <h1 class="w-full text-2xl font-bold text-[#FF3131] select-none hover:text-white cursor-default ease-in-out duration-500">
+    <div class="flex relative z-3 justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white">
+      <h1 class="w-full text-lg md:text-2xl font-bold text-[#FF3131] select-none hover:text-white cursor-default ease-in-out duration-500">
         <Link className="select-none " to="/">
           gabrielaxy.eth
         </Link>
       </h1>
 
-      <ul class="hidden md:flex select-none ">
+      <ul class="hidden lg:flex select-none ">
         <li class="p-5 hover:text-[#A9A9A9]">
           <Link classname="select-none" to="/about">
             About
           </Link>
-        </li>{" "}
+        </li>
         <li class="p-5 hover:text-[#A9A9A9]">
           <Link classname="select-none" to="/hacks">
             Hacks
@@ -39,7 +39,7 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-      <div class="block md:hidden">
+      <div class="block lg:hidden">
         {nav ? (
           <AiOutlineClose size={20} onClick={handleNav} />
         ) : (
