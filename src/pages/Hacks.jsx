@@ -55,9 +55,7 @@ function ProjectCard({
           }}
           src={hackLogo}
           alt="hackLogo"
-          className="object-fill rounded-l-lg cursor-pointer"
-          width={600}
-          height={300}
+          className="object-fill rounded-l-lg cursor-pointer w-[50%] md:w-[75%] h-auto"
         />
       ) : slide == 1 ? (
         <img
@@ -65,10 +63,8 @@ function ProjectCard({
             window.open(dashLink);
           }}
           src={projectDashboard}
-          className="object-fill rounded-t-lg xl:rounded-l-lg cursor-pointer"
+          className="object-fill rounded-l-lg cursor-pointer w-[50%] md:w-[75%] h-auto"
           alt="dashboard"
-          width={600}
-          height={300}
         />
       ) : (
         <img
@@ -76,17 +72,15 @@ function ProjectCard({
             window.open(dashLink);
           }}
           src={projectImage}
-          className="object-fill rounded-l-lg cursor-pointer"
+          className="object-fill rounded-l-lg cursor-pointer w-[50%] md:w-[75%] h-auto"
           alt="project"
-          width={600}
-          height={300}
         />
       )}
       <div className="xl:ml-8 xl:mr-4 text-center h-full flex flex-col justify-center select-none w-auto">
-        <h1 className="text-xl p-1">{hackName}</h1>
-        <h2 className="text-lg">{projectName}</h2>
-        <p className="text-sm p-2">{description}</p>
-        <h3 className="py-1">Team</h3>
+        <h1 className="text-sm md:text-lg p-1">{hackName}</h1>
+        <h2 className="text-xs md:text-base">{projectName}</h2>
+        <p className="text-[9px] md:text-xs p-2">{description}</p>
+        <h3 className="text-xs md:text-base py-1">Team</h3>
         <p className="relative z-10 flex justify-center text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
           <span className="">
             {team.map((mate, index) => (
@@ -95,7 +89,7 @@ function ProjectCard({
                   window.open(mate.link);
                 }}
                 key={index}
-                className="my-1 cursor-pointer mr-1 inline-flex items-center rounded-full bg-zinc-200 px-2.5 py-0.5 text-xs font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-100"
+                className="my-1 cursor-pointer mr-1 inline-flex items-center rounded-full bg-zinc-200 px-2.5 py-0.5 text-[8px] md:text-xs font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-100"
               >
                 <svg
                   className="-ml-0.5 mr-1.5 h-2 w-2 text-zinc-600"
@@ -109,13 +103,13 @@ function ProjectCard({
             ))}
           </span>
         </p>
-        <h3 className="py-1 text-sm">Prizes</h3>
+        <h3 className="py-1 text-xs md:text-lg">Prizes</h3>
         <p className="relative z-10 flex justify-center text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
           <span className="">
             {prizes.map((prize, index) => (
               <span
                 key={index}
-                className="my-1  mr-1 inline-flex items-center rounded-full bg-zinc-200 px-2.5 py-0.5 text-xs font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-100"
+                className="my-1  mr-1 inline-flex items-center rounded-full bg-zinc-200 px-2.5 py-0.5 text-[8px] md:text-xs font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-100"
               >
                 <svg
                   className="-ml-0.5 mr-1.5 h-2 w-2 text-zinc-600"
@@ -324,6 +318,10 @@ const Hacks = () => {
           {
             name: "Raksha",
             link: "https://www.linkedin.com/in/raksha001/",
+          },
+          {
+            name: "Fabian",
+            link: "https://www.linkedin.com/in/fabianferno/",
           },
           {
             name: "Subhiksha",

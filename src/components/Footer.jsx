@@ -82,14 +82,14 @@ const Footer = () => {
   return (
     <div className="select-custom h-[50px] flex  justify-between max-w-[800px] mx-auto mt-[50px]">
       <div className="flex h-[25px] w-[350px] justify-center">
-        <LinkedInIcon className="fill-[#A9A9A9] hover:fill-red-600 hover:cursor-pointer mx-2" />
-        <DiscordIcon className="fill-[#A9A9A9] hover:fill-red-600 hover:cursor-pointer mx-2" />
-        <GitHubIcon className="fill-[#A9A9A9] hover:fill-red-600 hover:cursor-pointer mx-2" />
-        <InstagramIcon className="fill-[#A9A9A9] hover:fill-red-600 hover:cursor-pointer mx-2" />
-        <TwitterIcon className="fill-[#A9A9A9] hover:fill-red-600 hover:cursor-pointer mx-2" />
+        <LinkedInIcon className="fill-[#A9A9A9] hover:fill-red-600 hover:cursor-pointer mx-2 w-[15px]" />
+        <DiscordIcon className="fill-[#A9A9A9] hover:fill-red-600 hover:cursor-pointer mx-2 w-[15px]" />
+        <GitHubIcon className="fill-[#A9A9A9] hover:fill-red-600 hover:cursor-pointer mx-2 w-[15px]" />
+        <InstagramIcon className="fill-[#A9A9A9] hover:fill-red-600 hover:cursor-pointer mx-2 w-[15px]" />
+        <TwitterIcon className="fill-[#A9A9A9] hover:fill-red-600 hover:cursor-pointer mx-2 w-[15px]" />
       </div>
       <div>
-        <p className="mr-4 text-[#A9A9A9] text-[9px] text-center font-thin ">
+        <p className="mr-4 text-[#A9A9A9] text-[7px] md:text-[9px] text-center font-thin ">
           © 2023 Gabriel. All rights reserved.
         </p>
       </div>

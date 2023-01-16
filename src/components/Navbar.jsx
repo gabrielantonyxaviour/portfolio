@@ -11,8 +11,8 @@ const Navbar = () => {
 
   return (
     <div class="flex relative z-3 justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white">
-      <h1 class="w-full text-lg md:text-2xl font-bold text-[#FF3131] select-none hover:text-white cursor-default ease-in-out duration-500">
-        <Link className="select-none " to="/">
+      <h1 class=" text-lg  md:text-2xl font-bold text-[#FF3131] select-none hover:text-white cursor-default ease-in-out duration-500">
+        <Link className="select-none   text-sm sm:text-base lg:text-xl " to="/">
           gabrielaxy.eth
         </Link>
       </h1>
@@ -54,7 +54,7 @@ const Navbar = () => {
         }
       >
         <h1 class="w-full text-2xl font-bold text-[#D22B2B] m-4 hover:text-white cursor-default ease-in-out duration-500">
-          <Link className="select-none " to="/">
+          <Link className="select-none text-sm sm:text-base lg:text-xl " to="/">
             gabrielaxy.eth
           </Link>
         </h1>

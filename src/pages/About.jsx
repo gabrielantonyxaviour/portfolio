@@ -8,9 +8,6 @@ import Second from "../assets/second.gif";
 import Third from "../assets/third.gif";
 import Typed from "react-typed";
 import TechStack from "../assets/icons/TechStack";
-// TODO: Add your tech stack by using logo of the language or framework
-// TODO: Fix the containers in timeline
-
 const About = () => {
   const TimeLineElement = ({
     image,
@@ -37,15 +34,13 @@ const About = () => {
         <div className="flex flex-col my-14 w-[100%] lg:hidden">
           <div className="flex flex-col mx-auto justify-center">
             <div className="flex flex-col justify-center">
-              <div className="mx-auto h-[130px]  w-[130px] bg-[#D22B2B] rounded-full text-white text-center  text-2xl flex flex-col justify-center shadow-lg shadow-red-500/50  ">
+              <div className="mx-auto h-[80px] w-[80px] lg:h-[130px]  lg:w-[130px] bg-[#D22B2B] rounded-full text-white text-center  text-sm md:text-lg lg:text-2xl flex flex-col justify-center shadow-lg shadow-red-500/50  ">
                 {year}
               </div>
             </div>
             <img
-              className="my-5  flex select-none"
+              className="my-5  flex select-none w-[150px] h-[150px] md:w-[250px] md:h-[250px]"
               src={image}
-              width={250}
-              height={250}
             ></img>
           </div>
           <div className="flex flex-col w-[100%]">
@@ -53,14 +48,16 @@ const About = () => {
               return (
                 <div
                   className={
-                    " h-[200px] mx-auto my-3 w-[420px] bg-[#D22B2B] rounded-xl shadow-lg shadow-red-500/50  hover:shadow-white transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 hover:bg-white hover:text-[#000000] duration-300"
+                    " h-[160px] md:h-[200px] mx-auto my-3 w-[230px] md:w-[420px] bg-[#D22B2B] rounded-xl shadow-lg shadow-red-500/50  hover:shadow-white transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 hover:bg-white hover:text-[#000000] duration-300"
                   }
                 >
                   <div className="m-4 ">
-                    <h1 className="text-xl mb-4 text-[#D3D3D3] ">
+                    <h1 className="text-sm md:text-lg lg:text-2xl mb-4 text-[#D3D3D3] ">
                       {headings[parseInt(index, 10)]}
                     </h1>
-                    <p className="break-words">{content}</p>
+                    <p className="text-[9px] md:text-base lg:text-lg break-words">
+                      {content}
+                    </p>
                   </div>
                 </div>
               );
@@ -143,14 +140,14 @@ const About = () => {
   return (
     <div className="px-4 text-white">
       <div className="max-w-[1200px] mt-[70px]  mx-auto w-full  flex flex-col justify-start">
-        <h1 className="text-2xl select-custom-about-title my-5 lg:text-start text-center">
+        <h1 className="text-md md:text-lg lg:text-2xl select-custom-about-title mb-5 lg:my-5 lg:text-start text-center">
           About
         </h1>
 
         <div className="flex flex-col lg:flex-row  justify-between">
-          <div className="w-[80%] mx-auto mb-12 lg:mb-0 lg:mx-0 text-center lg:text-start">
+          <div className="text-xs sm:text-sm md:text-base w-[90%] lg:w-[80%] mx-auto mb-12 lg:mb-0 lg:mx-0 text-center lg:text-start">
             <Typed
-              className="text-lg text-gray-500 select-custom "
+              className=" text-gray-500 select-custom "
               strings={[
                 "A saturday evening with lofi beats on my headphones and it's slightly drizzling with a cold breeze caressing my face and I type console.log(\"Hello World\"). That's the kind of pleasure I seek. I am a web3 developer with over 2 years of experience in building scalable and production ready smart contracts and decentralized applications. I play music, meditate, go to the gym everyday and...",
               ]}
@@ -159,7 +156,7 @@ const About = () => {
               onStop={() => {}}
             />
             <Typed
-              className="text-lg px-2 text-gray-500 select-custom-last about-hero-last"
+              className=" px-2 text-gray-500 select-custom-last about-hero-last"
               strings={[" I code"]}
               typeSpeed={70}
               showCursor={false}
@@ -168,28 +165,23 @@ const About = () => {
           </div>
           <img
             src={AboutHero}
-            className="mx-auto select-none"
+            className="mx-auto select-none w-[150px] md:w-[220px] h-[200px] md:h-[330px]"
             alt="Cat with a guitar"
-            width={220}
-            height={330}
           />
         </div>
         <div className="h-[200px] mt-[100px] ">
-          <h2 className="text-2xl text-center select-custom-about-title mb-12">
+          <h2 className="text-sm md:text-lg lg:text-2xl text-center select-custom-about-title mb-12">
             My Tech Stack
           </h2>
-          <div className="flex justify-between ">
+          <div className=" h-[300px] w-full inline-grid grid-cols-4 gap-4">
             {
-              <TechStack
-                className="fill-[#A9A9A9] hover:fill-red-600 mx-3"
-                width={50}
-              />
+              <TechStack className="fill-[#A9A9A9]  hover:fill-red-600 mx-auto w-[50px]" />
             }
           </div>
         </div>
-        <div className="my-0 lg:my-8">
+        <div className="mt-[200px] lg:my-8">
           <div className=" text-center">
-            <h1 className="text-2xl select-custom-about-title mb-[50px]">
+            <h1 className="text-sm md:text-lg lg:text-2xl select-custom-about-title mb-[50px]">
               Timeline
             </h1>
           </div>
@@ -213,19 +205,19 @@ const About = () => {
           <TimeLineElement
             image={School}
             year={2008}
-            headings={["June 4,2008", "April 21,2018", "July 6,2020"]}
+            headings={["June 4,2008", "April 21,2018"]}
             contents={[
               "I started my first grade at Holy Family Convent Mat. Hr. Sec. School, Chennai",
               "Compeleted 10th grade with 93.8 percentage",
-              "Completed 12th grade with 91 percentage",
             ]}
             leftRight={false}
           />
           <TimeLineElement
             image={Second}
             year={2020}
-            headings={["June 4,2008", "April 21,2018", "July 6,2020"]}
+            headings={["July 6,2020", "October 31,2020"]}
             contents={[
+              "Completed 12th grade with 91 percentage",
               "Pursuing B.E. ECE at Loyola ICAM College of Engineering and Technology, Chennai ",
             ]}
             leftRight={true}
