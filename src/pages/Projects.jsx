@@ -28,33 +28,31 @@ const Projects = () => {
 
   return (
     <div className="px-4 max-w-[1240px] mx-auto ">
-      <div className="flex justify-between">
-        <div>
-          <h1 className="text-2xl text-white mt-[70px] select-custom-about-title my-5">
-            Projects
-          </h1>
-          <div className="max-w-[800px] mb-[50px]">
-            <Typed
-              className="text-lg text-gray-500 select-custom "
-              strings={[
-                "By building applications one after the other, I gained a lot of experience and knowledge which I never believed I could have. It all started with a desire to make a change and bring out my ideas and innovation to this world which is going to be my never ending pursuit.",
-              ]}
-              typeSpeed={35}
-              showCursor={false}
-              onStop={() => {}}
-            />
-            <Typed
-              className="text-lg px-2 text-gray-500 select-custom-last about-hero-last"
-              strings={[" :)"]}
-              typeSpeed={70}
-              showCursor={false}
-              startDelay={18000}
-            />
-          </div>
+      <h1 className="text-2xl text-center lg:text-start text-white mt-[70px] select-custom-about-title my-5">
+        Projects
+      </h1>
+      <div className="flex lg:flex-row flex-col justify-between ">
+        <div className="max-w-[800px] mx-auto text-center lg:text-left lg:mx-0">
+          <Typed
+            className="text-lg text-gray-500 select-custom "
+            strings={[
+              "By building applications one after the other, I gained a lot of experience and knowledge which I never believed I could have. It all started with a desire to make a change and bring out my ideas and innovation to this world which is going to be my never ending pursuit.",
+            ]}
+            typeSpeed={35}
+            showCursor={false}
+            onStop={() => {}}
+          />
+          <Typed
+            className="text-lg px-2 text-gray-500 select-custom-last about-hero-last"
+            strings={[" :)"]}
+            typeSpeed={70}
+            showCursor={false}
+            startDelay={18000}
+          />
         </div>
         <img
           src={Power}
-          className="select-none"
+          className="select-none mx-auto lg:mx-0 mb-12 lg:mb-0"
           alt="Cat with a guitar"
           width={300}
         />
@@ -161,7 +159,7 @@ const Projects = () => {
           </div>
         </div>
       ) : (
-        <div className=" grid grid-cols-3 gap-5 select-none">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 select-none">
           {projects.map((project) => (
             <a className="h-full w-full" href={project.html_url}>
               <div className="  bg-[#D22B2B] text-white hover:bg-white hover:text-[#000000] rounded-lg p-2 w-full h-full shadow-lg shadow-red-500/50  hover:shadow-white transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105">
@@ -169,7 +167,7 @@ const Projects = () => {
                   {project.name}
                 </h2>
                 <p className="text-sm">{project.description}</p>
-                <p className="relative z-10 mt-4 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+                <p className=" z-10 mt-4 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
                   <span className="">
                     {project.topics.map((topic, index) => (
                       <span
