@@ -10,6 +10,7 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
+  height: 3px;
   width: 3px;
 }
 

@@ -33,23 +33,27 @@ const About = () => {
     }
 
     return (
-      <div className=" relative w-[100%] flex justify-between select-none ">
-        {!leftRight ? (
-          <div className="w-[40%] text-center ">
+      <div>
+        <div className="flex flex-col my-14 w-[100%] lg:hidden">
+          <div className="flex flex-col mx-auto justify-center">
+            <div className="flex flex-col justify-center">
+              <div className="mx-auto h-[130px]  w-[130px] bg-[#D22B2B] rounded-full text-white text-center  text-2xl flex flex-col justify-center shadow-lg shadow-red-500/50  ">
+                {year}
+              </div>
+            </div>
             <img
-              className="mx-auto select-none"
+              className="my-5  flex select-none"
               src={image}
               width={250}
               height={250}
             ></img>
           </div>
-        ) : (
-          <div className="flex flex-col w-[40%]">
+          <div className="flex flex-col w-[100%]">
             {contents.map((content, index) => {
               return (
                 <div
                   className={
-                    " h-[200px] mx-auto my-3 w-[450px] bg-[#D22B2B] rounded-xl shadow-lg shadow-red-500/50  hover:shadow-white transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 hover:bg-white hover:text-[#000000] duration-300"
+                    " h-[200px] mx-auto my-3 w-[420px] bg-[#D22B2B] rounded-xl shadow-lg shadow-red-500/50  hover:shadow-white transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 hover:bg-white hover:text-[#000000] duration-300"
                   }
                 >
                   <div className="m-4 ">
@@ -61,46 +65,77 @@ const About = () => {
                 </div>
               );
             })}
-          </div>
-        )}
-        <div className=" w-[20%] pt-[40px]">
-          <div className=" m-auto h-[130px] w-[130px] bg-[#D22B2B] rounded-full text-white text-center  text-2xl flex flex-col justify-center shadow-lg shadow-red-500/50  ">
-            {year}
           </div>
         </div>
-
-        {!leftRight ? (
-          <div className="flex flex-col w-[40%]">
-            {contents.map((content, index) => {
-              return (
-                <div
-                  className={
-                    " h-[200px] mx-auto my-3 w-[450px] bg-[#D22B2B] rounded-xl shadow-lg shadow-red-500/50  hover:shadow-white transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 hover:bg-white hover:text-[#000000] duration-300"
-                  }
-                >
-                  <div className="m-4 ">
-                    <h1 className="text-xl mb-4 text-[#D3D3D3] ">
-                      {headings[parseInt(index, 10)]}
-                    </h1>
-                    <p className="break-words">{content}</p>
+        <div className="hidden  relative w-[100%] lg:flex justify-between select-none ">
+          {!leftRight ? (
+            <div className="w-[40%] text-center ">
+              <img
+                className=" hidden lg:flex mx-auto select-none"
+                src={image}
+                width={250}
+                height={250}
+              ></img>
+            </div>
+          ) : (
+            <div className="flex flex-col w-[40%] ">
+              {contents.map((content, index) => {
+                return (
+                  <div
+                    className={
+                      " h-[200px] mx-auto my-3 w-[420px] bg-[#D22B2B] rounded-xl shadow-lg shadow-red-500/50  hover:shadow-white transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 hover:bg-white hover:text-[#000000] duration-300"
+                    }
+                  >
+                    <div className="m-4 ">
+                      <h1 className="text-xl mb-4 text-[#D3D3D3] ">
+                        {headings[parseInt(index, 10)]}
+                      </h1>
+                      <p className="break-words">{content}</p>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
+          )}
+          <div className=" w-[20%] pt-[40px]">
+            <div className=" m-auto h-[130px] w-[130px] bg-[#D22B2B] rounded-full text-white text-center  text-2xl flex flex-col justify-center shadow-lg shadow-red-500/50  ">
+              {year}
+            </div>
           </div>
-        ) : (
-          <div className="w-[40%]">
-            <img
-              className="select-none mx-auto"
-              src={image}
-              width={250}
-              height={250}
-            ></img>
-          </div>
-        )}
 
-        <div className="absolute left-[50%] top-[80px] flex flex-col">
-          {centerDashedLine(contents.length)}
+          {!leftRight ? (
+            <div className="flex flex-col w-[40%]">
+              {contents.map((content, index) => {
+                return (
+                  <div
+                    className={
+                      " h-[200px] mx-auto my-3 w-[420px] bg-[#D22B2B] rounded-xl shadow-lg shadow-red-500/50  hover:shadow-white transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 hover:bg-white hover:text-[#000000] duration-300"
+                    }
+                  >
+                    <div className="m-4 ">
+                      <h1 className="text-xl mb-4 text-[#D3D3D3] ">
+                        {headings[parseInt(index, 10)]}
+                      </h1>
+                      <p className="break-words">{content}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="w-[40%]">
+              <img
+                className="hidden lg:flex select-none mx-auto"
+                src={image}
+                width={250}
+                height={250}
+              ></img>
+            </div>
+          )}
+
+          <div className="hidden lg:flex absolute left-[50%] top-[150px] flex-col">
+            {centerDashedLine(contents.length)}
+          </div>
         </div>
       </div>
     );
@@ -108,31 +143,32 @@ const About = () => {
   return (
     <div className="px-4 text-white">
       <div className="max-w-[1200px] mt-[70px]  mx-auto w-full  flex flex-col justify-start">
-        <div className="flex justify-between">
-          <div>
-            <h1 className="text-2xl select-custom-about-title my-5">About</h1>
-            <div className="max-w-[800px]">
-              <Typed
-                className="text-lg text-gray-500 select-custom "
-                strings={[
-                  "A saturday evening with theWeekend on my headphones and it's slightly drizzling with a cold breeze caressing my face and I type console.log(\"Hello World\"). That's the kind of pleasure I seek. I am a web3 developer with over 2 years of experience in building scalable and production ready smart contracts and decentralized applications. I listen to music, play music, hit the gym everyday and...",
-                ]}
-                typeSpeed={35}
-                showCursor={false}
-                onStop={() => {}}
-              />
-              <Typed
-                className="text-lg px-2 text-gray-500 select-custom-last about-hero-last"
-                strings={[" I code"]}
-                typeSpeed={70}
-                showCursor={false}
-                startDelay={22500}
-              />
-            </div>
+        <h1 className="text-2xl select-custom-about-title my-5 lg:text-start text-center">
+          About
+        </h1>
+
+        <div className="flex flex-col lg:flex-row  justify-between">
+          <div className="max-w-[800px] mx-auto mb-12 lg:mb-0 lg:mx-0 text-center lg:text-start">
+            <Typed
+              className="text-lg text-gray-500 select-custom "
+              strings={[
+                "A saturday evening with theWeekend on my headphones and it's slightly drizzling with a cold breeze caressing my face and I type console.log(\"Hello World\"). That's the kind of pleasure I seek. I am a web3 developer with over 2 years of experience in building scalable and production ready smart contracts and decentralized applications. I listen to music, play music, hit the gym everyday and...",
+              ]}
+              typeSpeed={35}
+              showCursor={false}
+              onStop={() => {}}
+            />
+            <Typed
+              className="text-lg px-2 text-gray-500 select-custom-last about-hero-last"
+              strings={[" I code"]}
+              typeSpeed={70}
+              showCursor={false}
+              startDelay={22500}
+            />
           </div>
           <img
             src={AboutHero}
-            className="select-none"
+            className="mx-auto select-none"
             alt="Cat with a guitar"
             width={220}
             height={330}
