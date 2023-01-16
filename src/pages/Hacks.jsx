@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Typed from "react-typed";
 import Power from "../assets/power1.gif";
-import ETHGlobal from "../assets/hacks/ethglobal.png";
 
 import BuildQuestLogo from "../assets/hacks/ethglobal/buildquest/buildquestLogo.png";
 import BuildQuestDash from "../assets/hacks/ethglobal/buildquest/buildquest.png";
@@ -48,7 +47,7 @@ function ProjectCard({
   dashLink,
 }) {
   return (
-    <div className="my-10 h-[350px] w-[100%] rounded-lg  flex justify-between select-none text-white bg-[#FF3131] hover:-translate-y-1 hover:scale-105 hover:bg-white hover:text-[#000000] duration-300 ">
+    <div className=" my-10 h-[700px] xl:h-[350px] w-[600px] xl:w-full mx-auto xl:mx-0 rounded-lg  flex xl:flex-row flex-col justify-start xl:justify-between select-none text-white bg-[#FF3131] hover:-translate-y-1 hover:scale-105 hover:bg-white hover:text-[#000000] duration-300 ">
       {slide == 0 ? (
         <img
           onClick={() => {
@@ -66,7 +65,7 @@ function ProjectCard({
             window.open(dashLink);
           }}
           src={projectDashboard}
-          className="object-fill rounded-l-lg cursor-pointer"
+          className="object-fill rounded-t-lg xl:rounded-l-lg cursor-pointer"
           alt="dashboard"
           width={600}
           height={300}
@@ -83,7 +82,7 @@ function ProjectCard({
           height={300}
         />
       )}
-      <div className="w-[100%] ml-8 mr-4 text-center flex flex-col justify-center select-none">
+      <div className="xl:ml-8 xl:mr-4 text-center h-full flex flex-col justify-center select-none w-auto">
         <h1 className="text-xl p-1">{hackName}</h1>
         <h2 className="text-lg">{projectName}</h2>
         <p className="text-sm p-2">{description}</p>
@@ -146,33 +145,31 @@ const Hacks = () => {
 
   return (
     <div className="px-4 max-w-[1240px] mx-auto ">
-      <div className="flex justify-between my-8">
-        <div>
-          <h1 className="text-2xl text-white mt-[70px] select-custom-about-title my-5">
-            My Hackathons
-          </h1>
-          <div className="max-w-[800px] mb-[50px]">
-            <Typed
-              className="text-lg text-gray-500 select-custom "
-              strings={[
-                "My journey into web3 is heavily influenced by hackathons. Just few months after getting into web3, I pushed myself to things that really challenged me. Being a very competitive person, I really found my passion in participating in winning these competitions. Innovating new ideas and making it come to life can become an addiction ",
-              ]}
-              typeSpeed={35}
-              showCursor={false}
-              onStop={() => {}}
-            />
-            <Typed
-              className="text-lg px-3 text-gray-500 select-custom-last about-hero-last"
-              strings={[" XD"]}
-              typeSpeed={70}
-              showCursor={false}
-              startDelay={19000}
-            />
-          </div>
+      <h1 className="text-xl lg:text-2xl text-center xl:text-start text-white mt-[70px] select-custom-about-title my-5">
+        My Hackathons
+      </h1>
+      <div className=" text-center xl:text-start flex flex-col xl:flex-row justify-between my-8">
+        <div className="max-w-[800px] mx-auto xl:mx-0 ">
+          <Typed
+            className="text-lg text-gray-500 select-custom "
+            strings={[
+              "My journey into web3 is heavily influenced by hackathons. Just few months after getting into web3, I pushed myself to things that really challenged me. Being a very competitive person, I really found my passion in participating in winning these competitions. Innovating new ideas and making it come to life can become an addiction ",
+            ]}
+            typeSpeed={35}
+            showCursor={false}
+            onStop={() => {}}
+          />
+          <Typed
+            className="text-lg px-3 text-gray-500 select-custom-last about-hero-last"
+            strings={[" XD"]}
+            typeSpeed={70}
+            showCursor={false}
+            startDelay={19000}
+          />
         </div>
         <img
           src={Power}
-          className="select-none mr-8 mb-8"
+          className="mx-auto xl:mx-0 select-none mb-8"
           alt="Cat with a guitar"
           width={300}
         />
