@@ -61,14 +61,14 @@ const Contact = () => {
         </div>
         <div
           onClick={() => {
-            window.location = "mailto:gabrielantony56@gmail.com";
+            window.location = "mailto:contact@gabrielaxy.com";
           }}
           className="mt-[90px] h-[75px] w-[600px] bg-[#D22B2B] mx-auto rounded-2xl cursor-pointer shadow-md fill-white hover:fill-black shadow-red-500/50  hover:shadow-white transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-103 hover:bg-white hover:text-[#000000] duration-300"
         >
           <div className="w-[100%] h-[100%] flex align-middle justify-center select-none">
             <MailIcon className="fill-inherit  w-[30px] hover:fill-inherit  hover:cursor-pointer mx-3 my-auto" />
             <p className="inline text-center text-sm mx-3 h-auto my-auto">
-              gabrielantony56@gmail.com
+              contact@gabrielaxy.com
             </p>
           </div>
         </div>

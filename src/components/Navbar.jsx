@@ -22,15 +22,15 @@ const Navbar = () => {
           <Link classname="select-none" to="/about">
             About
           </Link>
+        </li>{" "}
+        <li class="p-5 hover:text-[#A9A9A9]">
+          <Link classname="select-none" to="/hacks">
+            Hacks
+          </Link>
         </li>
         <li class="p-5 hover:text-[#A9A9A9]">
           <Link classname="select-none" to="/projects">
             Projects
-          </Link>
-        </li>
-        <li class="p-5 hover:text-[#A9A9A9]">
-          <Link classname="select-none" to="/hacks">
-            Hacks
           </Link>
         </li>
         <li class="p-5 hover:text-[#A9A9A9]">
@@ -66,15 +66,16 @@ const Navbar = () => {
             </Link>
           </li>
           <li class="p-5 border-b border-gray-600">
-            <Link classname="select-none hover:text-[#A9A9A9]" to="/projects">
-              Projects
-            </Link>
-          </li>
-          <li class="p-5 border-b border-gray-600">
             <Link classname="select-none" to="/hacks">
               Hacks
             </Link>
           </li>
+          <li class="p-5 border-b border-gray-600">
+            <Link classname="select-none hover:text-[#A9A9A9]" to="/projects">
+              Projects
+            </Link>
+          </li>
+
           <li class="p-5">
             <Link classname="select-none hover:text-[#A9A9A9]" to="/contact">
               Contact

@@ -3,13 +3,15 @@ import AboutHero from "../assets/abouthero.gif";
 import Born from "../assets/born.gif";
 import School from "../assets/school.gif";
 import College from "../assets/college.gif";
+import Strong from "../assets/big.gif";
+import Second from "../assets/second.gif";
+import Third from "../assets/third.gif";
 import Typed from "react-typed";
-
+import TechStack from "../assets/icons/TechStack";
 // TODO: Add your tech stack by using logo of the language or framework
 // TODO: Fix the containers in timeline
 
 const About = () => {
-  var space;
   const TimeLineElement = ({
     image,
     year,
@@ -17,71 +19,92 @@ const About = () => {
     contents,
     leftRight,
     last,
-    links,
-    linkTexts,
   }) => {
+    function centerDashedLine(len) {
+      if (last) return [];
+      var arr = [];
+
+      for (let i = 0; i < len; i++) {
+        arr.push(
+          <div className=" -z-50   w-[5px] h-[220px] bg-transparent border-dashed border-r-2 border-[#A9A9A9]"></div>
+        );
+      }
+      return arr;
+    }
+
     return (
-      <div className="relative select-none">
-        {/* Image */}
-        <img
-          className={
-            !leftRight
-              ? " absolute left-[10%] select-none"
-              : "absolute left-[70%] select-none"
-          }
-          src={image}
-          width={250}
-          height={250}
-        ></img>
-        {/* Year */}
-        <div
-          className={
-            "absolute left-[44%] h-[130px] w-[130px] bg-[#D22B2B] rounded-full text-white text-center  text-2xl flex flex-col justify-center shadow-lg shadow-red-500/50  "
-          }
-        >
-          {year}
-        </div>
-        {/* Content Box */}
-        <div className="flex flex-col justify-between h-[1000px]">
-          <div className="h-[100px] w-[100px] bg-white"></div>
-          <div className="h-[100px] w-[100px] bg-white"></div>
-          <div className="h-[100px] w-[100px] bg-white"></div>
-
-          {/* {contents.map((content, index) => {
-            return (
-              <div
-                className={
-                  !leftRight
-                    ? "absolute left-[60%] h-[200px] w-[450px] bg-[#D22B2B] rounded-xl shadow-lg shadow-red-500/50  hover:shadow-white transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 hover:bg-white hover:text-[#000000] duration-300"
-                    : "absolute  h-[200px] w-[450px] bg-[#D22B2B] rounded-xl shadow-lg shadow-red-500/50  hover:shadow-white transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 hover:bg-white hover:text-[#000000] duration-300"
-                }
-              >
-                <div className="m-4 ">
-                  <h1 className="text-xl mb-4 text-[#D3D3D3] ">
-                    {headings[parseInt(index, 10)]}
-                  </h1>
-                  <p className="break-words">{content}</p>
-                  <a
-                    href={links[parseInt(index, 10)]}
-                    className="text-gray-300 hover:text-[#71797E] "
-                  >
-                    {linkTexts[parseInt(index, 10)]}
-                  </a>
+      <div className=" relative w-[100%] flex justify-between select-none ">
+        {!leftRight ? (
+          <div className="w-[40%] text-center ">
+            <img
+              className="mx-auto select-none"
+              src={image}
+              width={250}
+              height={250}
+            ></img>
+          </div>
+        ) : (
+          <div className="flex flex-col w-[40%]">
+            {contents.map((content, index) => {
+              return (
+                <div
+                  className={
+                    " h-[200px] mx-auto my-3 w-[450px] bg-[#D22B2B] rounded-xl shadow-lg shadow-red-500/50  hover:shadow-white transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 hover:bg-white hover:text-[#000000] duration-300"
+                  }
+                >
+                  <div className="m-4 ">
+                    <h1 className="text-xl mb-4 text-[#D3D3D3] ">
+                      {headings[parseInt(index, 10)]}
+                    </h1>
+                    <p className="break-words">{content}</p>
+                  </div>
                 </div>
-              </div>
-            );
-          })} */}
+              );
+            })}
+          </div>
+        )}
+        <div className=" w-[20%] pt-[40px]">
+          <div className=" m-auto h-[130px] w-[130px] bg-[#D22B2B] rounded-full text-white text-center  text-2xl flex flex-col justify-center shadow-lg shadow-red-500/50  ">
+            {year}
+          </div>
         </div>
 
-        {/* Center extending line */}
-        {!last && (
-          <div className="-z-50 relative left-[49%] w-[5px] h-[350px] bg-transparent border-dashed border-r-2 border-[#A9A9A9]"></div>
+        {!leftRight ? (
+          <div className="flex flex-col w-[40%]">
+            {contents.map((content, index) => {
+              return (
+                <div
+                  className={
+                    " h-[200px] mx-auto my-3 w-[450px] bg-[#D22B2B] rounded-xl shadow-lg shadow-red-500/50  hover:shadow-white transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 hover:bg-white hover:text-[#000000] duration-300"
+                  }
+                >
+                  <div className="m-4 ">
+                    <h1 className="text-xl mb-4 text-[#D3D3D3] ">
+                      {headings[parseInt(index, 10)]}
+                    </h1>
+                    <p className="break-words">{content}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="w-[40%]">
+            <img
+              className="select-none mx-auto"
+              src={image}
+              width={250}
+              height={250}
+            ></img>
+          </div>
         )}
+
+        <div className="absolute left-[50%] top-[80px] flex flex-col">
+          {centerDashedLine(contents.length)}
+        </div>
       </div>
     );
   };
-  var x =
-    "shadow-lg shadow-red-500/50  hover:shadow-white transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:bg-white hover:text-[#000000] duration-300";
   return (
     <div className="px-4 text-white">
       <div className="max-w-[1200px] mt-[70px]  mx-auto w-full  flex flex-col justify-start">
@@ -115,7 +138,20 @@ const About = () => {
             height={330}
           />
         </div>
-        <div className="my-[170px]">
+        <div className="h-[200px] mt-[100px] ">
+          <h2 className="text-2xl text-center select-custom-about-title mb-12">
+            My Tech Stack
+          </h2>
+          <div className="flex justify-between ">
+            {
+              <TechStack
+                className="fill-[#A9A9A9] hover:fill-red-600"
+                width={50}
+              />
+            }
+          </div>
+        </div>
+        <div className="my-8">
           <div className=" text-center">
             <h1 className="text-2xl select-custom-about-title mb-[50px]">
               Timeline
@@ -127,55 +163,65 @@ const About = () => {
             year={2003}
             headings={["July 16,2003"]}
             contents={["I made it... "]}
-            links={[""]}
-            linkTexts={[""]}
             leftRight={false}
+          />
+          <TimeLineElement
+            image={College}
+            year={2006}
+            headings={["June 20,2006"]}
+            contents={[
+              "I joined my Kindergarten classes at Airforce Kindergarten, Tambaram",
+            ]}
+            leftRight={true}
           />
           <TimeLineElement
             image={School}
-            year={2006}
-            headings={["June 20,2006"]}
-            contents={["I joined my Kindergarten classes at "]}
-            links={["http://afs.eduniv.in/"]}
-            linkTexts={["Airforce Kindergarten, Tambaram, Chennai"]}
-            leftRight={true}
-          />
-          <TimeLineElement
-            image={College}
             year={2008}
             headings={["June 4,2008", "April 21,2018", "July 6,2020"]}
             contents={[
-              "I started my first grade at ",
+              "I started my first grade at Holy Family Convent Mat. Hr. Sec. School, Chennai",
               "Compeleted 10th grade with 93.8 percentage",
               "Completed 12th grade with 91 percentage",
             ]}
-            links={[
-              "https://www.facebook.com/profile.php?id=100065105254278",
-              "",
-              "",
-            ]}
-            linkTexts={["Holy Family Convent Mat. Hr. Sec. School", "", ""]}
             leftRight={false}
           />
-          {/* <TimeLineElement
-            image={College}
+          <TimeLineElement
+            image={Second}
             year={2020}
-            content={"Halojvsigvbuabhvaiobvoiaesbnvoiaehiovhea"}
+            headings={["June 4,2008", "April 21,2018", "July 6,2020"]}
+            contents={[
+              "Pursuing B.E. ECE at Loyola ICAM College of Engineering and Technology, Chennai ",
+            ]}
             leftRight={true}
           />
           <TimeLineElement
-            image={College}
+            image={Third}
             year={2021}
-            content={"Halojvsigvbuabhvaiobvoiaesbnvoiaehiovhea"}
+            headings={[
+              "June 15,2021",
+              "August 2,2021",
+              "November 30,2021",
+              "December 30,2021",
+            ]}
+            contents={[
+              "Released Jaaman Shooter, a 2D shooter game with 315K+ Downloads and 4.5⭐ rating in Google Play Games",
+              "My First Internship at Rax Tech International, Chennai. I worked on IoT with Embedded C",
+              "Joined LICET Pattarai, a student led Tech Community in LICET",
+              "Orgnaized my first workshop in Pattarai on developing cross-platform applications with Flutter",
+            ]}
             leftRight={false}
           />
           <TimeLineElement
-            image={College}
+            image={Strong}
             year={2022}
-            content={"Halojvsigvbuabhvaiobvoiaesbnvoiaehiovhea"}
+            headings={["August 4,2022", "August 21,2022"]}
+            contents={[
+              "Worked as a Blockchain Developer Intern and Consultant at NFTconomy",
+              "Became the President of Pattarai for a brief period of 3 months",
+            ]}
             leftRight={true}
             last={true}
-          /> */}
+          />
         </div>
       </div>
     </div>
