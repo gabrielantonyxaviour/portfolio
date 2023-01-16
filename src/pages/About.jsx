@@ -181,13 +181,13 @@ const About = () => {
           <div className="flex justify-between ">
             {
               <TechStack
-                className="fill-[#A9A9A9] hover:fill-red-600"
+                className="fill-[#A9A9A9] hover:fill-red-600 mx-3"
                 width={50}
               />
             }
           </div>
         </div>
-        <div className="my-8">
+        <div className="my-0 lg:my-8">
           <div className=" text-center">
             <h1 className="text-2xl select-custom-about-title mb-[50px]">
               Timeline
