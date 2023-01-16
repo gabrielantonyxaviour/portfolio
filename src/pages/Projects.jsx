@@ -28,13 +28,13 @@ const Projects = () => {
 
   return (
     <div className="px-4 max-w-[1240px] mx-auto ">
-      <h1 className="text-2xl text-center lg:text-start text-white mt-[70px] select-custom-about-title my-5">
+      <h1 className="text-sm md:text-lg lg:text-2xl text-center lg:text-start text-white mt-[70px] select-custom-about-title my-5">
         Projects
       </h1>
       <div className="flex lg:flex-row flex-col justify-between ">
-        <div className="max-w-[800px] mx-auto text-center lg:text-left lg:mx-0">
+        <div className="text-[10px] md:text-xs lg:text-base max-w-[800px] mx-auto text-center lg:text-left lg:mx-0">
           <Typed
-            className="text-lg text-gray-500 select-custom "
+            className=" text-gray-500 select-custom "
             strings={[
               "By building applications one after the other, I gained a lot of experience and knowledge which I never believed I could have. It all started with a desire to make a change and bring out my ideas and innovation to this world which is going to be my never ending pursuit.",
             ]}
@@ -43,7 +43,7 @@ const Projects = () => {
             onStop={() => {}}
           />
           <Typed
-            className="text-lg px-2 text-gray-500 select-custom-last about-hero-last"
+            className=" px-2 text-gray-500 select-custom-last about-hero-last"
             strings={[" :)"]}
             typeSpeed={70}
             showCursor={false}
@@ -52,9 +52,8 @@ const Projects = () => {
         </div>
         <img
           src={Power}
-          className="select-none mx-auto lg:mx-0 mb-12 lg:mb-0"
-          alt="Cat with a guitar"
-          width={300}
+          className="select-none w-[200px] md:w-[300px] mx-auto lg:mx-0 mb-12 lg:mb-0"
+          alt="Fireee"
         />
       </div>
       <h1></h1>
@@ -163,16 +162,16 @@ const Projects = () => {
           {projects.map((project) => (
             <a className="h-full w-full" href={project.html_url}>
               <div className="  bg-[#D22B2B] text-white hover:bg-white hover:text-[#000000] rounded-lg p-2 w-full h-full shadow-lg shadow-red-500/50  hover:shadow-white transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105">
-                <h2 className="mt-2 mb-4 break-words text-lg font-semibold text-zinc-300 ">
+                <h2 className="mt-2 mb-4 break-words text-sm md:text-lg font-semibold text-zinc-300 ">
                   {project.name}
                 </h2>
-                <p className="text-sm">{project.description}</p>
-                <p className=" z-10 mt-4 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+                <p className="text-[10px] md:text-sm">{project.description}</p>
+                <p className=" z-10 mt-4 flex text-[8px] md:text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
                   <span className="">
                     {project.topics.map((topic, index) => (
                       <span
                         key={index}
-                        className="my-1 mr-1 inline-flex items-center rounded-full bg-zinc-200 px-2.5 py-0.5 text-xs font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-100"
+                        className="my-1 mr-1 inline-flex items-center rounded-full bg-zinc-200 px-2.5 py-0.5 font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-100"
                       >
                         <svg
                           className="-ml-0.5 mr-1.5 h-2 w-2 text-zinc-600"
