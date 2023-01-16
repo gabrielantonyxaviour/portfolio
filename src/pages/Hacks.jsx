@@ -47,7 +47,7 @@ function ProjectCard({
   dashLink,
 }) {
   return (
-    <div className=" my-10 h-[700px] xl:h-[350px] w-[600px] xl:w-full mx-auto xl:mx-0 rounded-lg  flex xl:flex-row flex-col justify-start xl:justify-between select-none text-white bg-[#FF3131] hover:-translate-y-1 hover:scale-105 hover:bg-white hover:text-[#000000] duration-300 ">
+    <div className=" my-10 h-[550px] w-[350px] md:h-[650px] xl:h-[350px] md:w-[600px] xl:w-full mx-auto xl:mx-0 rounded-lg  flex xl:flex-row flex-col justify-start xl:justify-between select-none text-white bg-[#FF3131] hover:-translate-y-1 hover:scale-105 hover:bg-white hover:text-[#000000] duration-300 ">
       {slide == 0 ? (
         <img
           onClick={() => {
@@ -55,7 +55,7 @@ function ProjectCard({
           }}
           src={hackLogo}
           alt="hackLogo"
-          className="object-fill rounded-l-lg cursor-pointer w-[50%] md:w-[75%] h-auto"
+          className="object-fill rounded-t-lg xl:rounded-l-lg cursor-pointer w-[350px] h-[250px] sm:w-[400px] sm:h-[200px] md:w-[600px] md:h-[350px]"
         />
       ) : slide == 1 ? (
         <img
@@ -63,7 +63,7 @@ function ProjectCard({
             window.open(dashLink);
           }}
           src={projectDashboard}
-          className="object-fill rounded-l-lg cursor-pointer w-[50%] md:w-[75%] h-auto"
+          className="object-fill rounded-l-lg cursor-pointer w-[350px] h-[250px] sm:w-[400px] sm:h-[200px] md:w-[600px] md:h-[350px]  "
           alt="dashboard"
         />
       ) : (
@@ -72,14 +72,14 @@ function ProjectCard({
             window.open(dashLink);
           }}
           src={projectImage}
-          className="object-fill rounded-l-lg cursor-pointer w-[50%] md:w-[75%] h-auto"
+          className="object-fill rounded-l-lg cursor-pointer w-[350px] h-[250px] sm:w-[400px] sm:h-[200px] md:w-[600px] md:h-[350px]  "
           alt="project"
         />
       )}
       <div className="xl:ml-8 xl:mr-4 text-center h-full flex flex-col justify-center select-none w-auto">
         <h1 className="text-sm md:text-lg p-1">{hackName}</h1>
         <h2 className="text-xs md:text-base">{projectName}</h2>
-        <p className="text-[9px] md:text-xs p-2">{description}</p>
+        <p className="text-[9px] md:text-[10px] p-2">{description}</p>
         <h3 className="text-xs md:text-base py-1">Team</h3>
         <p className="relative z-10 flex justify-center text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
           <span className="">
@@ -89,7 +89,7 @@ function ProjectCard({
                   window.open(mate.link);
                 }}
                 key={index}
-                className="my-1 cursor-pointer mr-1 inline-flex items-center rounded-full bg-zinc-200 px-2.5 py-0.5 text-[8px] md:text-xs font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-100"
+                className="my-1 cursor-pointer mr-1 inline-flex items-center rounded-full bg-zinc-200 px-2.5 py-0.5 text-[8px] md:text-[10px] font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-100"
               >
                 <svg
                   className="-ml-0.5 mr-1.5 h-2 w-2 text-zinc-600"
@@ -103,13 +103,13 @@ function ProjectCard({
             ))}
           </span>
         </p>
-        <h3 className="py-1 text-xs md:text-lg">Prizes</h3>
+        <h3 className="py-1 text-xs md:text-base">Prizes</h3>
         <p className="relative z-10 flex justify-center text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
           <span className="">
             {prizes.map((prize, index) => (
               <span
                 key={index}
-                className="my-1  mr-1 inline-flex items-center rounded-full bg-zinc-200 px-2.5 py-0.5 text-[8px] md:text-xs font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-100"
+                className="my-1  mr-1 inline-flex items-center rounded-full bg-zinc-200 px-2.5 py-0.5 text-[8px] md:text-[10px] font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-100"
               >
                 <svg
                   className="-ml-0.5 mr-1.5 h-2 w-2 text-zinc-600"
@@ -139,13 +139,13 @@ const Hacks = () => {
 
   return (
     <div className="px-4 max-w-[1240px] mx-auto ">
-      <h1 className="text-xl lg:text-2xl text-center xl:text-start text-white mt-[70px] select-custom-about-title my-5">
+      <h1 className="text-sm md:text-lg lg:text-2xl text-center xl:text-start text-white mt-[70px] select-custom-about-title my-5">
         My Hackathons
       </h1>
       <div className=" text-center xl:text-start flex flex-col xl:flex-row justify-between my-8">
-        <div className="max-w-[800px] mx-auto xl:mx-0 ">
+        <div className="text-[10px] sm:text-xs md:text-sm lg:text-base max-w-[800px] mx-auto xl:mx-0 ">
           <Typed
-            className="text-lg text-gray-500 select-custom "
+            className="text-gray-500 select-custom "
             strings={[
               "My journey into web3 is heavily influenced by hackathons. Just few months after getting into web3, I pushed myself to things that really challenged me. Being a very competitive person, I really found my passion in participating in winning these competitions. Innovating new ideas and making it come to life can become an addiction ",
             ]}
@@ -154,7 +154,7 @@ const Hacks = () => {
             onStop={() => {}}
           />
           <Typed
-            className="text-lg px-3 text-gray-500 select-custom-last about-hero-last"
+            className=" px-3 text-gray-500 select-custom-last about-hero-last"
             strings={[" XD"]}
             typeSpeed={70}
             showCursor={false}
