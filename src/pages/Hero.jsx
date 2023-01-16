@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="flex flex-col text-xs md:text-base lg:text-lg w-[60%] justify-center">
           <div className="w-full flex justify-center">
             <img
-              className="select-none w-[90px] md:w-[150px] h-[120px] md:h-[150px]"
+              className="select-none w-[90px] md:w-[150px] h-[120px] md:h-[200px]"
               src={Gabe}
             ></img>
           </div>
