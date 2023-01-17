@@ -59,25 +59,49 @@ const Navbar = () => {
           </Link>
         </h1>
 
-        <ul class="p-5 uppercase">
+        <ul class="p-5 uppercase text-xs sm:text-base">
           <li class="p-5 border-b border-gray-600">
-            <Link classname="select-none hover:text-[#A9A9A9]" to="/about">
+            <Link
+              classname="select-none hover:text-[#A9A9A9]"
+              to="/about"
+              onClick={() => {
+                setNav(!nav);
+              }}
+            >
               About
             </Link>
           </li>
           <li class="p-5 border-b border-gray-600">
-            <Link classname="select-none" to="/hacks">
+            <Link
+              classname="select-none"
+              to="/hacks"
+              onClick={() => {
+                setNav(!nav);
+              }}
+            >
               Hacks
             </Link>
           </li>
           <li class="p-5 border-b border-gray-600">
-            <Link classname="select-none hover:text-[#A9A9A9]" to="/projects">
+            <Link
+              classname="select-none hover:text-[#A9A9A9]"
+              to="/projects"
+              onClick={() => {
+                setNav(!nav);
+              }}
+            >
               Projects
             </Link>
           </li>
 
           <li class="p-5">
-            <Link classname="select-none hover:text-[#A9A9A9]" to="/contact">
+            <Link
+              classname="select-none hover:text-[#A9A9A9]"
+              to="/contact"
+              onClick={() => {
+                setNav(!nav);
+              }}
+            >
               Contact
             </Link>
           </li>

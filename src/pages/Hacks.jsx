@@ -81,7 +81,7 @@ function ProjectCard({
         <h2 className="text-xs md:text-base">{projectName}</h2>
         <p className="text-[9px] md:text-[10px] p-2">{description}</p>
         <h3 className="text-xs md:text-base py-1">Team</h3>
-        <p className="relative z-10 flex justify-center text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+        <p className=" flex justify-center text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
           <span className="">
             {team.map((mate, index) => (
               <span
@@ -104,7 +104,7 @@ function ProjectCard({
           </span>
         </p>
         <h3 className="py-1 text-xs md:text-base">Prizes</h3>
-        <p className="relative z-10 flex justify-center text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+        <p className=" flex justify-center text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
           <span className="">
             {prizes.map((prize, index) => (
               <span
