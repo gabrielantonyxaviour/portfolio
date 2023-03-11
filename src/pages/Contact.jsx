@@ -14,7 +14,7 @@ function MailIcon(props) {
 }
 const Contact = () => {
   return (
-    <div className="px-4 text-white h-screen">
+    <div className="px-4 text-white min-h-screen">
       <div className="max-w-[1200px] mt-[200px]  mx-auto w-full flex flex-col justify-start">
         <div className="mx-auto h-[400px] flex flex-col select-none text-[#A9A9A9]">
           <div className="flex justify-around text-center">

@@ -245,7 +245,7 @@ const About = () => {
             headings={["August 4,2022", "August 21,2022"]}
             contents={[
               "Worked as a Blockchain Developer Intern and Consultant at NFTconomy",
-              "Became the President of Pattarai for a brief period of 3 months",
+              // "Became the President of Pattarai for a brief period of 3 months",
             ]}
             leftRight={true}
             last={true}

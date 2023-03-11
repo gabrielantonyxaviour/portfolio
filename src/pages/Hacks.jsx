@@ -22,6 +22,14 @@ import ETHIndiaLogo from "../assets/hacks/ethglobal/ethindia/ethindiaLogo.png";
 import ETHIndiaDash from "../assets/hacks/ethglobal/ethindia/ethindia.png";
 import ETHIndiaProj from "../assets/hacks/ethglobal/ethindia/polyedu.png";
 
+import SpaceWarpLogo from "../assets/hacks/ethglobal/spacewarp/spacewarpLogo.png";
+import SpaceWarpDash from "../assets/hacks/ethglobal/spacewarp/spacewarp.png";
+import SpaceWarpProj from "../assets/hacks/ethglobal/spacewarp/depto.png";
+
+import EthForAllLogo from "../assets/hacks/devfolio/ethforall/ethforallLogo.png";
+import EthForAllDash from "../assets/hacks/devfolio/ethforall/ethforall.png";
+import EthForAllProj from "../assets/hacks/devfolio/ethforall/superoffers.png";
+
 import FaberLogo from "../assets/hacks/devpost/faberweb3/faberweb3logo.jpg";
 import FaberDash from "../assets/hacks/devpost/faberweb3/faberweb3.png";
 import FaberProj from "../assets/hacks/devpost/faberweb3/brandapp.jpg";
@@ -387,6 +395,57 @@ const Hacks = () => {
         ]}
         prizes={["👑 Honorable Mentions"]}
         dashLink={"https://devpost.com/software/xrpals"}
+      />
+      <ProjectCard
+        hackLogo={SpaceWarpLogo}
+        projectDashboard={SpaceWarpDash}
+        hackName={"FVM Spacewarp 2023"}
+        projectName={"DEPTO"}
+        projectImage={SpaceWarpProj}
+        description={
+          "Provable and decentralized Data DAO for patent provisioning and verification."
+        }
+        slide={slide}
+        team={[
+          {
+            name: "Gabriel",
+            link: "https://www.linkedin.com/in/gabriel-antony/",
+          },
+          {
+            name: "Pinto",
+            link: "https://www.linkedin.com/in/pintoinfant/",
+          },
+          {
+            name: "Fabian",
+            link: "https://www.linkedin.com/in/fabianferno/",
+          },
+        ]}
+        prizes={["🔥 Filecoin & IPFS — 🏊 FVM Jetpacks"]}
+        dashLink={
+          "https://ethglobal.com/showcase/depto-decentralized-patent-and-trademrk-office-c9hd2"
+        }
+      />
+      <ProjectCard
+        hackLogo={EthForAllLogo}
+        projectDashboard={EthForAllDash}
+        hackName={"ETHForAll 2023"}
+        projectName={"Super Offers"}
+        projectImage={EthForAllProj}
+        description={
+          "Complete on-chain tasks and get a constant stream of income."
+        }
+        slide={slide}
+        team={[
+          {
+            name: "Gabriel",
+            link: "https://www.linkedin.com/in/gabriel-antony/",
+          },
+        ]}
+        prizes={[
+          "🏅 Push Protocol - Best use of Push Protocol",
+          "🏊 Superfluid - Pool Prize",
+        ]}
+        dashLink={"https://devfolio.co/projects/super-offers-1c57"}
       />
     </div>
   );
