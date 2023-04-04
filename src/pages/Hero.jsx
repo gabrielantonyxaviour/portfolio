@@ -50,17 +50,17 @@ const Hero = () => {
           />
           <Typed
             className="select-custom p-2 hero-style    text-[#A9A9A9] font-bold pl-2"
-            strings={["I game, workout and code"]}
+            strings={["Welcome to my "]}
             typeSpeed={100}
             showCursor={false}
             startDelay={9000}
           />
           <Typed
             className="select-custom-last p-2 hero-style    text-[#FF3131] font-bold pl-2"
-            strings={["a lot"]}
+            strings={["realm"]}
             typeSpeed={50}
             showCursor={false}
-            startDelay={14000}
+            startDelay={11000}
           />
         </div>
         <div className="flex flex-col justify-evenly w-[20%] mt-10">

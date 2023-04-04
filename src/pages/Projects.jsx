@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import octokit from "../components/githubConfig";
 import Typed from "react-typed";
 import Power from "../assets/power2.gif";
-
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [isLoading, setLoader] = useState(true);
@@ -59,100 +58,105 @@ const Projects = () => {
       <h1></h1>
 
       {isLoading ? (
-        <div className=" grid grid-cols-3 gap-5">
-          <div class="  rounded-md p-4 max-w-sm w-full mx-auto">
-            <div class="animate-pulse flex flex-col space-y-4">
-              <div class="rounded-full bg-slate-700 h-20 w-20  mx-auto"></div>
-              <div class="flex-1 space-y-6 py-1">
-                <div class="h-2 bg-slate-700 rounded"></div>
-                <div class="space-y-3">
-                  <div class="grid grid-cols-3 gap-4">
-                    <div class="h-2 bg-slate-700 rounded col-span-2"></div>
-                    <div class="h-2 bg-slate-700 rounded col-span-1"></div>
-                  </div>
-                  <div class="grid grid-cols-3 gap-4">
-                    <div class="h-2 bg-slate-700 rounded col-span-2"></div>
-                    <div class="h-2 bg-slate-700 rounded col-span-1"></div>
-                  </div>
+        <div className="select-custom">
+          <div className="text-gray-500 text-center mt-5 mb-3 text-sm ">
+            Fetching from GitHub...
+          </div>
+          <div className=" grid grid-cols-3 gap-5">
+            <div class="  rounded-md p-4 max-w-sm w-full mx-auto">
+              <div class="animate-pulse flex flex-col space-y-4">
+                <div class="rounded-full bg-slate-700 h-20 w-20  mx-auto"></div>
+                <div class="flex-1 space-y-6 py-1">
                   <div class="h-2 bg-slate-700 rounded"></div>
-                </div>
-                <div class="space-y-3">
-                  <div class="grid grid-cols-3 gap-4">
-                    <div class="h-2 bg-slate-700 rounded col-span-2"></div>
-                    <div class="h-2 bg-slate-700 rounded col-span-1"></div>
+                  <div class="space-y-3">
+                    <div class="grid grid-cols-3 gap-4">
+                      <div class="h-2 bg-slate-700 rounded col-span-2"></div>
+                      <div class="h-2 bg-slate-700 rounded col-span-1"></div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4">
+                      <div class="h-2 bg-slate-700 rounded col-span-2"></div>
+                      <div class="h-2 bg-slate-700 rounded col-span-1"></div>
+                    </div>
+                    <div class="h-2 bg-slate-700 rounded"></div>
                   </div>
-                  <div class="h-2 bg-slate-700 rounded"></div>
+                  <div class="space-y-3">
+                    <div class="grid grid-cols-3 gap-4">
+                      <div class="h-2 bg-slate-700 rounded col-span-2"></div>
+                      <div class="h-2 bg-slate-700 rounded col-span-1"></div>
+                    </div>
+                    <div class="h-2 bg-slate-700 rounded"></div>
 
-                  <div class="grid grid-cols-3 gap-4">
-                    <div class="h-2 bg-slate-700 rounded col-span-2"></div>
-                    <div class="h-2 bg-slate-700 rounded col-span-1"></div>
+                    <div class="grid grid-cols-3 gap-4">
+                      <div class="h-2 bg-slate-700 rounded col-span-2"></div>
+                      <div class="h-2 bg-slate-700 rounded col-span-1"></div>
+                    </div>
                   </div>
+                  <div class="h-2 bg-slate-700 rounded"></div>
                 </div>
-                <div class="h-2 bg-slate-700 rounded"></div>
               </div>
             </div>
-          </div>
-          <div class="  rounded-md p-4 max-w-sm w-full mx-auto">
-            <div class="animate-pulse flex flex-col space-y-4">
-              <div class="rounded-full bg-slate-700 h-20 w-20  mx-auto"></div>
-              <div class="flex-1 space-y-6 py-1">
-                <div class="h-2 bg-slate-700 rounded"></div>
-                <div class="space-y-3">
-                  <div class="grid grid-cols-3 gap-4">
-                    <div class="h-2 bg-slate-700 rounded col-span-2"></div>
-                    <div class="h-2 bg-slate-700 rounded col-span-1"></div>
-                  </div>
-                  <div class="grid grid-cols-3 gap-4">
-                    <div class="h-2 bg-slate-700 rounded col-span-2"></div>
-                    <div class="h-2 bg-slate-700 rounded col-span-1"></div>
-                  </div>
+            <div class="  rounded-md p-4 max-w-sm w-full mx-auto">
+              <div class="animate-pulse flex flex-col space-y-4">
+                <div class="rounded-full bg-slate-700 h-20 w-20  mx-auto"></div>
+                <div class="flex-1 space-y-6 py-1">
                   <div class="h-2 bg-slate-700 rounded"></div>
-                </div>
-                <div class="space-y-3">
-                  <div class="grid grid-cols-3 gap-4">
-                    <div class="h-2 bg-slate-700 rounded col-span-2"></div>
-                    <div class="h-2 bg-slate-700 rounded col-span-1"></div>
+                  <div class="space-y-3">
+                    <div class="grid grid-cols-3 gap-4">
+                      <div class="h-2 bg-slate-700 rounded col-span-2"></div>
+                      <div class="h-2 bg-slate-700 rounded col-span-1"></div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4">
+                      <div class="h-2 bg-slate-700 rounded col-span-2"></div>
+                      <div class="h-2 bg-slate-700 rounded col-span-1"></div>
+                    </div>
+                    <div class="h-2 bg-slate-700 rounded"></div>
                   </div>
-                  <div class="h-2 bg-slate-700 rounded"></div>
+                  <div class="space-y-3">
+                    <div class="grid grid-cols-3 gap-4">
+                      <div class="h-2 bg-slate-700 rounded col-span-2"></div>
+                      <div class="h-2 bg-slate-700 rounded col-span-1"></div>
+                    </div>
+                    <div class="h-2 bg-slate-700 rounded"></div>
 
-                  <div class="grid grid-cols-3 gap-4">
-                    <div class="h-2 bg-slate-700 rounded col-span-2"></div>
-                    <div class="h-2 bg-slate-700 rounded col-span-1"></div>
+                    <div class="grid grid-cols-3 gap-4">
+                      <div class="h-2 bg-slate-700 rounded col-span-2"></div>
+                      <div class="h-2 bg-slate-700 rounded col-span-1"></div>
+                    </div>
                   </div>
+                  <div class="h-2 bg-slate-700 rounded"></div>
                 </div>
-                <div class="h-2 bg-slate-700 rounded"></div>
               </div>
             </div>
-          </div>
-          <div class="  rounded-md p-4 max-w-sm w-full mx-auto">
-            <div class="animate-pulse flex flex-col space-y-4">
-              <div class="rounded-full bg-slate-700 h-20 w-20  mx-auto"></div>
-              <div class="flex-1 space-y-6 py-1">
-                <div class="h-2 bg-slate-700 rounded"></div>
-                <div class="space-y-3">
-                  <div class="grid grid-cols-3 gap-4">
-                    <div class="h-2 bg-slate-700 rounded col-span-2"></div>
-                    <div class="h-2 bg-slate-700 rounded col-span-1"></div>
-                  </div>
-                  <div class="grid grid-cols-3 gap-4">
-                    <div class="h-2 bg-slate-700 rounded col-span-2"></div>
-                    <div class="h-2 bg-slate-700 rounded col-span-1"></div>
-                  </div>
+            <div class="  rounded-md p-4 max-w-sm w-full mx-auto">
+              <div class="animate-pulse flex flex-col space-y-4">
+                <div class="rounded-full bg-slate-700 h-20 w-20  mx-auto"></div>
+                <div class="flex-1 space-y-6 py-1">
                   <div class="h-2 bg-slate-700 rounded"></div>
-                </div>
-                <div class="space-y-3">
-                  <div class="grid grid-cols-3 gap-4">
-                    <div class="h-2 bg-slate-700 rounded col-span-2"></div>
-                    <div class="h-2 bg-slate-700 rounded col-span-1"></div>
+                  <div class="space-y-3">
+                    <div class="grid grid-cols-3 gap-4">
+                      <div class="h-2 bg-slate-700 rounded col-span-2"></div>
+                      <div class="h-2 bg-slate-700 rounded col-span-1"></div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4">
+                      <div class="h-2 bg-slate-700 rounded col-span-2"></div>
+                      <div class="h-2 bg-slate-700 rounded col-span-1"></div>
+                    </div>
+                    <div class="h-2 bg-slate-700 rounded"></div>
                   </div>
-                  <div class="h-2 bg-slate-700 rounded"></div>
+                  <div class="space-y-3">
+                    <div class="grid grid-cols-3 gap-4">
+                      <div class="h-2 bg-slate-700 rounded col-span-2"></div>
+                      <div class="h-2 bg-slate-700 rounded col-span-1"></div>
+                    </div>
+                    <div class="h-2 bg-slate-700 rounded"></div>
 
-                  <div class="grid grid-cols-3 gap-4">
-                    <div class="h-2 bg-slate-700 rounded col-span-2"></div>
-                    <div class="h-2 bg-slate-700 rounded col-span-1"></div>
+                    <div class="grid grid-cols-3 gap-4">
+                      <div class="h-2 bg-slate-700 rounded col-span-2"></div>
+                      <div class="h-2 bg-slate-700 rounded col-span-1"></div>
+                    </div>
                   </div>
+                  <div class="h-2 bg-slate-700 rounded"></div>
                 </div>
-                <div class="h-2 bg-slate-700 rounded"></div>
               </div>
             </div>
           </div>

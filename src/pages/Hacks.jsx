@@ -42,6 +42,10 @@ import XRPLLogo from "../assets/hacks/devpost/xrpl/xrplLogo.png";
 import XRPLDash from "../assets/hacks/devpost/xrpl/xrpl.png";
 import XRPLProj from "../assets/hacks/devpost/xrpl/xrpals.png";
 
+import OxUNOLogo from "../assets/hacks/ethglobal/scaling2023/scalingLogo.png";
+import OxUNODash from "../assets/hacks/ethglobal/scaling2023/scaling.png";
+import OxUNOProj from "../assets/hacks/ethglobal/scaling2023/oxuno.png";
+
 function ProjectCard({
   hackLogo,
   projectDashboard,
@@ -210,6 +214,77 @@ const Hacks = () => {
         dashLink={"https://ethglobal.com/showcase/suprarms-7xz9r"}
       />
       <ProjectCard
+        hackLogo={FaberLogo}
+        projectDashboard={FaberDash}
+        hackName={"Faber Web3 2022"}
+        projectName={"Brandapp"}
+        projectImage={FaberProj}
+        description={
+          "Mint your brand, Create your own white-label Brand Resource Center."
+        }
+        slide={slide}
+        team={[
+          {
+            name: "Gabriel",
+            link: "https://www.linkedin.com/in/gabriel-antony/",
+          },
+          {
+            name: "Raksha",
+            link: "https://www.linkedin.com/in/raksha001/",
+          },
+          {
+            name: "Fabian",
+            link: "https://www.linkedin.com/in/fabianferno/",
+          },
+          {
+            name: "Subhiksha",
+            link: "https://www.linkedin.com/in/elizabeth-subhiksha-victoria-b3a661193/",
+          },
+          {
+            name: "Veroni",
+            link: "https://www.linkedin.com/in/veroni-shwetha/",
+          },
+          {
+            name: "Jesinthan",
+            link: "https://www.linkedin.com/in/jesinthan/",
+          },
+        ]}
+        prizes={["⚡ Across the Line Award"]}
+        dashLink={"https://devpost.com/software/brandapp"}
+      />
+      <ProjectCard
+        hackLogo={SpringLogo}
+        projectDashboard={SpringDash}
+        hackName={"Chainlink Spring 2022"}
+        projectName={"AIRNFT"}
+        projectImage={SpringProj}
+        description={
+          "An interactive nft service that aids the creator in bringing interactive nfts to the market: be it games, 3d models, interactive animations etc."
+        }
+        slide={slide}
+        team={[
+          {
+            name: "Gabriel",
+            link: "https://www.linkedin.com/in/gabriel-antony/",
+          },
+          {
+            name: "Sailesh",
+            link: "https://www.linkedin.com/in/sailesh-sivakumar-453061141/",
+          },
+          {
+            name: "Shachindra",
+            link: "https://www.linkedin.com/in/shachindra92/",
+          },
+          { name: "Karan", link: "https://www.linkedin.com/in/karanbdev/" },
+          {
+            name: "Ishan",
+            link: "https://www.linkedin.com/in/ishan-pathak-96852a1b7/",
+          },
+        ]}
+        prizes={["🏃 Filecoin - Runners up"]}
+        dashLink={"https://devpost.com/software/ins"}
+      />
+      <ProjectCard
         hackLogo={HackMoneyLogo}
         projectDashboard={HackMoneyDash}
         hackName={"HackMoney 2022"}
@@ -308,77 +383,7 @@ const Hacks = () => {
         ]}
         dashLink={"https://ethglobal.com/showcase/poly-edu-t2h8m"}
       />
-      <ProjectCard
-        hackLogo={FaberLogo}
-        projectDashboard={FaberDash}
-        hackName={"Faber Web3 2022"}
-        projectName={"Brandapp"}
-        projectImage={FaberProj}
-        description={
-          "Mint your brand, Create your own white-label Brand Resource Center."
-        }
-        slide={slide}
-        team={[
-          {
-            name: "Gabriel",
-            link: "https://www.linkedin.com/in/gabriel-antony/",
-          },
-          {
-            name: "Raksha",
-            link: "https://www.linkedin.com/in/raksha001/",
-          },
-          {
-            name: "Fabian",
-            link: "https://www.linkedin.com/in/fabianferno/",
-          },
-          {
-            name: "Subhiksha",
-            link: "https://www.linkedin.com/in/elizabeth-subhiksha-victoria-b3a661193/",
-          },
-          {
-            name: "Veroni",
-            link: "https://www.linkedin.com/in/veroni-shwetha/",
-          },
-          {
-            name: "Jesinthan",
-            link: "https://www.linkedin.com/in/jesinthan/",
-          },
-        ]}
-        prizes={["⚡ Across the Line Award"]}
-        dashLink={"https://devpost.com/software/brandapp"}
-      />
-      <ProjectCard
-        hackLogo={SpringLogo}
-        projectDashboard={SpringDash}
-        hackName={"Chainlink Spring 2022"}
-        projectName={"AIRNFT"}
-        projectImage={SpringProj}
-        description={
-          "An interactive nft service that aids the creator in bringing interactive nfts to the market: be it games, 3d models, interactive animations etc."
-        }
-        slide={slide}
-        team={[
-          {
-            name: "Gabriel",
-            link: "https://www.linkedin.com/in/gabriel-antony/",
-          },
-          {
-            name: "Sailesh",
-            link: "https://www.linkedin.com/in/sailesh-sivakumar-453061141/",
-          },
-          {
-            name: "Shachindra",
-            link: "https://www.linkedin.com/in/shachindra92/",
-          },
-          { name: "Karan", link: "https://www.linkedin.com/in/karanbdev/" },
-          {
-            name: "Ishan",
-            link: "https://www.linkedin.com/in/ishan-pathak-96852a1b7/",
-          },
-        ]}
-        prizes={["🏃 Filecoin - Runners up"]}
-        dashLink={"https://devpost.com/software/ins"}
-      />
+
       <ProjectCard
         hackLogo={XRPLLogo}
         projectDashboard={XRPLDash}
@@ -446,6 +451,29 @@ const Hacks = () => {
           "🏊 Superfluid - Pool Prize",
         ]}
         dashLink={"https://devfolio.co/projects/super-offers-1c57"}
+      />
+      <ProjectCard
+        hackLogo={OxUNOLogo}
+        projectDashboard={OxUNODash}
+        hackName={"Scaling Ethereum 2023"}
+        projectName={"0xUNO"}
+        projectImage={OxUNOProj}
+        description={
+          "A cross chain P2E UNO game where players can play with opponents from a different chain and earn 💲."
+        }
+        slide={slide}
+        team={[
+          {
+            name: "Gabriel",
+            link: "https://www.linkedin.com/in/gabriel-antony/",
+          },
+          {
+            name: "Fabian",
+            link: "https://www.linkedin.com/in/fabianferno/",
+          },
+        ]}
+        prizes={["🤝 Push Protocol — Best UX", "👯 Polybase — Pool Prize"]}
+        dashLink={"https://ethglobal.com/showcase/oxuno-0j53o"}
       />
     </div>
   );
