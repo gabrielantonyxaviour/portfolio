@@ -46,6 +46,13 @@ import OxUNOLogo from "../assets/hacks/ethglobal/scaling2023/scalingLogo.png";
 import OxUNODash from "../assets/hacks/ethglobal/scaling2023/scaling.png";
 import OxUNOProj from "../assets/hacks/ethglobal/scaling2023/oxuno.png";
 
+import TokyoLogo from "../assets/hacks/ethglobal/tokyo/tokyoLogo.jpg";
+import TokyoDash from "../assets/hacks/ethglobal/tokyo/tokyo.png";
+import TokyoProj from "../assets/hacks/ethglobal/tokyo/zaisan.png";
+
+import SparrowLogo from "../assets/hacks/licet/sparrow/sparrowLogo.png";
+import SparrowDash from "../assets/hacks/licet/sparrow/sparrowDash.jpg";
+import SparrowProj from "../assets/hacks/licet/sparrow/sparrow.png";
 function ProjectCard({
   hackLogo,
   projectDashboard,
@@ -473,6 +480,62 @@ const Hacks = () => {
           },
         ]}
         prizes={["🤝 Push Protocol — Best UX", "👯 Polybase — Pool Prize"]}
+        dashLink={"https://ethglobal.com/showcase/oxuno-0j53o"}
+      />
+      <ProjectCard
+        hackLogo={TokyoLogo}
+        projectDashboard={TokyoDash}
+        hackName={"ETHGlobal Tokyo 2023"}
+        projectName={"Zaisan"}
+        projectImage={TokyoProj}
+        description={
+          "Create promotions. Earn rewards without revealing data. Build the infinite community."
+        }
+        slide={slide}
+        team={[
+          {
+            name: "Gabriel",
+            link: "https://www.linkedin.com/in/gabriel-antony/",
+          },
+          {
+            name: "Roman Lobanov",
+            link: "https://www.linkedin.com/in/roman-lobanov-b8122198/",
+          },
+        ]}
+        prizes={[
+          "📜 Scroll — Just Deploy",
+          "🏊 Worldcoin — Pool Prize",
+          "🥉 Sismo — Best ZK Badge or Data Hack",
+          "🏊‍♂️ Polygon — Pool Prize",
+          "🤝 Hyperlane — Best use of Interoperability",
+        ]}
+        dashLink={"https://ethglobal.com/showcase/oxuno-0j53o"}
+      />
+      <ProjectCard
+        hackLogo={SparrowLogo}
+        projectDashboard={SparrowDash}
+        hackName={"Survey Sparrow Hackathon"}
+        projectName={"SURV-A"}
+        projectImage={SparrowProj}
+        description={
+          "Automated Survey Response Analysis with geographical data and word cloud analysis using Entity Detection."
+        }
+        slide={slide}
+        team={[
+          {
+            name: "Gabriel",
+            link: "https://www.linkedin.com/in/gabriel-antony/",
+          },
+          {
+            name: "Pinto Infant Valan",
+            link: "https://www.linkedin.com/in/pintoinfant/",
+          },
+          {
+            name: "Ramya MV",
+            link: "https://www.linkedin.com/in/ramya-mv-1092/",
+          },
+        ]}
+        prizes={["🥇 1st Prize"]}
         dashLink={"https://ethglobal.com/showcase/oxuno-0j53o"}
       />
     </div>
