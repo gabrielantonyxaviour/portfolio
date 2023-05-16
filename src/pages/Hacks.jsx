@@ -53,6 +53,11 @@ import TokyoProj from "../assets/hacks/ethglobal/tokyo/zaisan.png";
 import SparrowLogo from "../assets/hacks/licet/sparrow/sparrowLogo.png";
 import SparrowDash from "../assets/hacks/licet/sparrow/sparrowDash.jpg";
 import SparrowProj from "../assets/hacks/licet/sparrow/sparrow.png";
+
+import LisonLogo from "../assets/hacks/ethglobal/lisbon/lisbonLogo.png";
+import LisbonDash from "../assets/hacks/ethglobal/lisbon/lisbon.png";
+import LisbonProj from "../assets/hacks/ethglobal/lisbon/qsound.png";
+
 function ProjectCard({
   hackLogo,
   projectDashboard,
@@ -537,6 +542,33 @@ const Hacks = () => {
         ]}
         prizes={["🥇 1st Prize"]}
         dashLink={"https://ethglobal.com/showcase/oxuno-0j53o"}
+      />
+      <ProjectCard
+        hackLogo={LisonLogo}
+        projectDashboard={LisbonDash}
+        hackName={"ETHGlobal Lisbon 2023"}
+        projectName={"QSound"}
+        projectImage={LisbonProj}
+        description={
+          "A music streaming platform where anyone can sell their songs by token gating them on a flexible subscription basis."
+        }
+        slide={slide}
+        team={[
+          {
+            name: "Gabriel",
+            link: "https://www.linkedin.com/in/gabriel-antony/",
+          },
+          {
+            name: "Roman Lobanov",
+            link: "https://www.linkedin.com/in/roman-lobanov-b8122198/",
+          },
+        ]}
+        prizes={[
+          "🥈 ApeCoin DAO — Best Integration",
+          "🏊 The Graph — Pool Prize",
+          "📜 Scroll — Just Deploy",
+        ]}
+        dashLink={"https://ethglobal.com/showcase/qsound-sqju3"}
       />
     </div>
   );
