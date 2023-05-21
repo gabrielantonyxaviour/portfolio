@@ -514,7 +514,7 @@ const Hacks = () => {
           "🏊‍♂️ Polygon — Pool Prize",
           "🤝 Hyperlane — Best use of Interoperability",
         ]}
-        dashLink={"https://ethglobal.com/showcase/oxuno-0j53o"}
+        dashLink={"https://ethglobal.com/showcase/zaisan-6dxue"}
       />
       <ProjectCard
         hackLogo={SparrowLogo}
@@ -541,7 +541,7 @@ const Hacks = () => {
           },
         ]}
         prizes={["🥇 1st Prize"]}
-        dashLink={"https://ethglobal.com/showcase/oxuno-0j53o"}
+        dashLink={"https://github.com/pintoinfant/surv-a"}
       />
       <ProjectCard
         hackLogo={LisonLogo}
