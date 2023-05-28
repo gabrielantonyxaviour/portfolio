@@ -58,6 +58,10 @@ import LisonLogo from "../assets/hacks/ethglobal/lisbon/lisbonLogo.png";
 import LisbonDash from "../assets/hacks/ethglobal/lisbon/lisbon.png";
 import LisbonProj from "../assets/hacks/ethglobal/lisbon/qsound.png";
 
+import TopGLogo from "../assets/hacks/ethglobal/autonomous/autonomousLogo.jpg";
+import TopGDash from "../assets/hacks/ethglobal/autonomous/autonomous.png";
+import TopGProj from "../assets/hacks/ethglobal/autonomous/topgchess.png";
+
 function ProjectCard({
   hackLogo,
   projectDashboard,
@@ -569,6 +573,32 @@ const Hacks = () => {
           "📜 Scroll — Just Deploy",
         ]}
         dashLink={"https://ethglobal.com/showcase/qsound-sqju3"}
+      />
+      <ProjectCard
+        hackLogo={TopGLogo}
+        projectDashboard={TopGDash}
+        hackName={"Autonomous Worlds 2023"}
+        projectName={"TopGChess"}
+        projectImage={TopGProj}
+        description={
+          "A P2E chess game with AI built using MUD and zkML generates zkProof for the AI difficulty."
+        }
+        slide={slide}
+        team={[
+          {
+            name: "Gabriel",
+            link: "https://www.linkedin.com/in/gabriel-antony/",
+          },
+          {
+            name: "Fabian",
+            link: "https://www.linkedin.com/in/fabianferno/",
+          },
+        ]}
+        prizes={[
+          "🔟 NFT.Storage — Best Use",
+          "🥉 0xPARC — Best use of Advanced Cryptography",
+        ]}
+        dashLink={"https://ethglobal.com/showcase/topgchess-609b1"}
       />
     </div>
   );
